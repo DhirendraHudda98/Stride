@@ -889,6 +889,10 @@ app.get('/api/admin/stats', needAdmin, wrap(async (_, res) => {
 }));
 
 app.use('/api', (_, res) => res.status(404).json({ error: 'Not found' }));
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/stride')
-  .then(() => app.listen(process.env.PORT || 4000, () => console.log('Stride running on http://localhost:' + (process.env.PORT || 4000))))
-  .catch(e => { console.error('MongoDB connection failed:', e.message); process.exit(1); });
+if (require.main === module) {
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/stride')
+    .then(() => app.listen(process.env.PORT || 4000, () => console.log('Stride running on http://localhost:' + (process.env.PORT || 4000))))
+    .catch(e => { console.error('MongoDB connection failed:', e.message); process.exit(1); });
+}
+
+module.exports = { app, mongoose };
