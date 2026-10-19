@@ -1,0 +1,2642 @@
+[
+  {
+    "name": "Crimson Pace Runner",
+    "brand": "Stride Athletics",
+    "gender": "unisex",
+    "type": "runner",
+    "mrp": 499900,
+    "price": 349900,
+    "stock": 6,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/crimson-pace-runner_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/crimson-pace-runner_cover.webp",
+        "cardUrl": "/uploads/products/crimson-pace-runner_cover_card.webp",
+        "thumbUrl": "/uploads/products/crimson-pace-runner_cover_thumb.webp",
+        "alt": "Crimson Pace Runner (side cover)",
+        "isCover": true,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1542291026-7eec264c27ff",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/crimson-pace-runner_detail.webp",
+        "cardUrl": "/uploads/products/crimson-pace-runner_detail.webp",
+        "thumbUrl": "/uploads/products/crimson-pace-runner_detail_thumb.webp",
+        "alt": "Crimson Pace Runner (upper detail)",
+        "isCover": false,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1542291026-7eec264c27ff",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/crimson-pace-runner_sole.webp",
+        "cardUrl": "/uploads/products/crimson-pace-runner_sole.webp",
+        "thumbUrl": "/uploads/products/crimson-pace-runner_sole_thumb.webp",
+        "alt": "Crimson Pace Runner (sole traction)",
+        "isCover": false,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1542291026-7eec264c27ff",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Red Edition",
+        "hex": "#dc2626",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Crimson Pace Runner offers premium craftsmanship, authentic red aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Stealth Knit Runner",
+    "brand": "Stride Athletics",
+    "gender": "men",
+    "type": "runner",
+    "mrp": 399900,
+    "price": 299900,
+    "stock": 13,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/stealth-knit-runner_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/stealth-knit-runner_cover.webp",
+        "cardUrl": "/uploads/products/stealth-knit-runner_cover_card.webp",
+        "thumbUrl": "/uploads/products/stealth-knit-runner_cover_thumb.webp",
+        "alt": "Stealth Knit Runner (side cover)",
+        "isCover": true,
+        "credit": "Paul Volkmer on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608231387042-66d1773070a5",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/stealth-knit-runner_detail.webp",
+        "cardUrl": "/uploads/products/stealth-knit-runner_detail.webp",
+        "thumbUrl": "/uploads/products/stealth-knit-runner_detail_thumb.webp",
+        "alt": "Stealth Knit Runner (upper detail)",
+        "isCover": false,
+        "credit": "Paul Volkmer on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608231387042-66d1773070a5",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/stealth-knit-runner_sole.webp",
+        "cardUrl": "/uploads/products/stealth-knit-runner_sole.webp",
+        "thumbUrl": "/uploads/products/stealth-knit-runner_sole_thumb.webp",
+        "alt": "Stealth Knit Runner (sole traction)",
+        "isCover": false,
+        "credit": "Paul Volkmer on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608231387042-66d1773070a5",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Black Edition",
+        "hex": "#18181b",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Stealth Knit Runner offers premium craftsmanship, authentic black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Neon Cushion Stride",
+    "brand": "Stride Athletics",
+    "gender": "unisex",
+    "type": "runner",
+    "mrp": 549900,
+    "price": 399900,
+    "stock": 20,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/neon-cushion-stride_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/neon-cushion-stride_cover.webp",
+        "cardUrl": "/uploads/products/neon-cushion-stride_cover_card.webp",
+        "thumbUrl": "/uploads/products/neon-cushion-stride_cover_thumb.webp",
+        "alt": "Neon Cushion Stride (side cover)",
+        "isCover": true,
+        "credit": "Maksim Larin on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595950653106-6c9ebd614d3a",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/neon-cushion-stride_detail.webp",
+        "cardUrl": "/uploads/products/neon-cushion-stride_detail.webp",
+        "thumbUrl": "/uploads/products/neon-cushion-stride_detail_thumb.webp",
+        "alt": "Neon Cushion Stride (upper detail)",
+        "isCover": false,
+        "credit": "Maksim Larin on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595950653106-6c9ebd614d3a",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/neon-cushion-stride_sole.webp",
+        "cardUrl": "/uploads/products/neon-cushion-stride_sole.webp",
+        "thumbUrl": "/uploads/products/neon-cushion-stride_sole_thumb.webp",
+        "alt": "Neon Cushion Stride (sole traction)",
+        "isCover": false,
+        "credit": "Maksim Larin on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595950653106-6c9ebd614d3a",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "White / Neon Edition",
+        "hex": "#e2e8f0",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Neon Cushion Stride offers premium craftsmanship, authentic white / neon aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Aero Mesh Trainer",
+    "brand": "Stride Athletics",
+    "gender": "men",
+    "type": "runner",
+    "mrp": 349900,
+    "price": 249900,
+    "stock": 27,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/aero-mesh-trainer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/aero-mesh-trainer_cover.webp",
+        "cardUrl": "/uploads/products/aero-mesh-trainer_cover_card.webp",
+        "thumbUrl": "/uploads/products/aero-mesh-trainer_cover_thumb.webp",
+        "alt": "Aero Mesh Trainer (side cover)",
+        "isCover": true,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1584735935682-2f2b69dff9d2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/aero-mesh-trainer_detail.webp",
+        "cardUrl": "/uploads/products/aero-mesh-trainer_detail.webp",
+        "thumbUrl": "/uploads/products/aero-mesh-trainer_detail_thumb.webp",
+        "alt": "Aero Mesh Trainer (upper detail)",
+        "isCover": false,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1584735935682-2f2b69dff9d2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/aero-mesh-trainer_sole.webp",
+        "cardUrl": "/uploads/products/aero-mesh-trainer_sole.webp",
+        "thumbUrl": "/uploads/products/aero-mesh-trainer_sole_thumb.webp",
+        "alt": "Aero Mesh Trainer (sole traction)",
+        "isCover": false,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1584735935682-2f2b69dff9d2",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Orange / Grey Edition",
+        "hex": "#f97316",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Aero Mesh Trainer offers premium craftsmanship, authentic orange / grey aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Hyper Blue Runner",
+    "brand": "Stride Athletics",
+    "gender": "women",
+    "type": "runner",
+    "mrp": 379900,
+    "price": 279900,
+    "stock": 34,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/hyper-blue-runner_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/hyper-blue-runner_cover.webp",
+        "cardUrl": "/uploads/products/hyper-blue-runner_cover_card.webp",
+        "thumbUrl": "/uploads/products/hyper-blue-runner_cover_thumb.webp",
+        "alt": "Hyper Blue Runner (side cover)",
+        "isCover": true,
+        "credit": "REVISE on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515955656352-a1fa3ffcd111",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/hyper-blue-runner_detail.webp",
+        "cardUrl": "/uploads/products/hyper-blue-runner_detail.webp",
+        "thumbUrl": "/uploads/products/hyper-blue-runner_detail_thumb.webp",
+        "alt": "Hyper Blue Runner (upper detail)",
+        "isCover": false,
+        "credit": "REVISE on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515955656352-a1fa3ffcd111",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/hyper-blue-runner_sole.webp",
+        "cardUrl": "/uploads/products/hyper-blue-runner_sole.webp",
+        "thumbUrl": "/uploads/products/hyper-blue-runner_sole_thumb.webp",
+        "alt": "Hyper Blue Runner (sole traction)",
+        "isCover": false,
+        "credit": "REVISE on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515955656352-a1fa3ffcd111",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Blue Edition",
+        "hex": "#2563eb",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Hyper Blue Runner offers premium craftsmanship, authentic blue aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Classic White Court",
+    "brand": "Stride Heritage",
+    "gender": "unisex",
+    "type": "court",
+    "mrp": 349900,
+    "price": 249900,
+    "stock": 9,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/classic-white-court_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/classic-white-court_cover.webp",
+        "cardUrl": "/uploads/products/classic-white-court_cover_card.webp",
+        "thumbUrl": "/uploads/products/classic-white-court_cover_thumb.webp",
+        "alt": "Classic White Court (side cover)",
+        "isCover": true,
+        "credit": "Hermes Rivera on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1607522370275-f14206abe5d3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/classic-white-court_detail.webp",
+        "cardUrl": "/uploads/products/classic-white-court_detail.webp",
+        "thumbUrl": "/uploads/products/classic-white-court_detail_thumb.webp",
+        "alt": "Classic White Court (upper detail)",
+        "isCover": false,
+        "credit": "Hermes Rivera on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1607522370275-f14206abe5d3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/classic-white-court_sole.webp",
+        "cardUrl": "/uploads/products/classic-white-court_sole.webp",
+        "thumbUrl": "/uploads/products/classic-white-court_sole_thumb.webp",
+        "alt": "Classic White Court (sole traction)",
+        "isCover": false,
+        "credit": "Hermes Rivera on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1607522370275-f14206abe5d3",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "White Edition",
+        "hex": "#f8fafc",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Classic White Court offers premium craftsmanship, authentic white aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Retro Skate Court",
+    "brand": "Stride Heritage",
+    "gender": "men",
+    "type": "court",
+    "mrp": 299900,
+    "price": 229900,
+    "stock": 16,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/retro-skate-court_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/retro-skate-court_cover.webp",
+        "cardUrl": "/uploads/products/retro-skate-court_cover_card.webp",
+        "thumbUrl": "/uploads/products/retro-skate-court_cover_thumb.webp",
+        "alt": "Retro Skate Court (side cover)",
+        "isCover": true,
+        "credit": "Jan Antonin Kolar on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1525966222134-fcfa99b8ae77",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/retro-skate-court_detail.webp",
+        "cardUrl": "/uploads/products/retro-skate-court_detail.webp",
+        "thumbUrl": "/uploads/products/retro-skate-court_detail_thumb.webp",
+        "alt": "Retro Skate Court (upper detail)",
+        "isCover": false,
+        "credit": "Jan Antonin Kolar on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1525966222134-fcfa99b8ae77",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/retro-skate-court_sole.webp",
+        "cardUrl": "/uploads/products/retro-skate-court_sole.webp",
+        "thumbUrl": "/uploads/products/retro-skate-court_sole_thumb.webp",
+        "alt": "Retro Skate Court (sole traction)",
+        "isCover": false,
+        "credit": "Jan Antonin Kolar on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1525966222134-fcfa99b8ae77",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Tan / White Edition",
+        "hex": "#d97706",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Retro Skate Court offers premium craftsmanship, authentic tan / white aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Metro Colorblock Court",
+    "brand": "Stride Heritage",
+    "gender": "unisex",
+    "type": "court",
+    "mrp": 359900,
+    "price": 269900,
+    "stock": 23,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/metro-colorblock-court_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/metro-colorblock-court_cover.webp",
+        "cardUrl": "/uploads/products/metro-colorblock-court_cover_card.webp",
+        "thumbUrl": "/uploads/products/metro-colorblock-court_cover_thumb.webp",
+        "alt": "Metro Colorblock Court (side cover)",
+        "isCover": true,
+        "credit": "Revolt on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560769629-975ec94e6a86",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/metro-colorblock-court_detail.webp",
+        "cardUrl": "/uploads/products/metro-colorblock-court_detail.webp",
+        "thumbUrl": "/uploads/products/metro-colorblock-court_detail_thumb.webp",
+        "alt": "Metro Colorblock Court (upper detail)",
+        "isCover": false,
+        "credit": "Revolt on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560769629-975ec94e6a86",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/metro-colorblock-court_sole.webp",
+        "cardUrl": "/uploads/products/metro-colorblock-court_sole.webp",
+        "thumbUrl": "/uploads/products/metro-colorblock-court_sole_thumb.webp",
+        "alt": "Metro Colorblock Court (sole traction)",
+        "isCover": false,
+        "credit": "Revolt on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560769629-975ec94e6a86",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Multicolor Edition",
+        "hex": "#0284c7",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Metro Colorblock Court offers premium craftsmanship, authentic multicolor aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Minimalist Canvas Court",
+    "brand": "Stride Heritage",
+    "gender": "women",
+    "type": "court",
+    "mrp": 249900,
+    "price": 179900,
+    "stock": 30,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/minimalist-canvas-court_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/minimalist-canvas-court_cover.webp",
+        "cardUrl": "/uploads/products/minimalist-canvas-court_cover_card.webp",
+        "thumbUrl": "/uploads/products/minimalist-canvas-court_cover_thumb.webp",
+        "alt": "Minimalist Canvas Court (side cover)",
+        "isCover": true,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1562183241-b937e95585b6",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/minimalist-canvas-court_detail.webp",
+        "cardUrl": "/uploads/products/minimalist-canvas-court_detail.webp",
+        "thumbUrl": "/uploads/products/minimalist-canvas-court_detail_thumb.webp",
+        "alt": "Minimalist Canvas Court (upper detail)",
+        "isCover": false,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1562183241-b937e95585b6",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/minimalist-canvas-court_sole.webp",
+        "cardUrl": "/uploads/products/minimalist-canvas-court_sole.webp",
+        "thumbUrl": "/uploads/products/minimalist-canvas-court_sole_thumb.webp",
+        "alt": "Minimalist Canvas Court (sole traction)",
+        "isCover": false,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1562183241-b937e95585b6",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Pink / Beige Edition",
+        "hex": "#f472b6",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Minimalist Canvas Court offers premium craftsmanship, authentic pink / beige aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Urban Street Court",
+    "brand": "Stride Heritage",
+    "gender": "men",
+    "type": "court",
+    "mrp": 389900,
+    "price": 289900,
+    "stock": 37,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/urban-street-court_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/urban-street-court_cover.webp",
+        "cardUrl": "/uploads/products/urban-street-court_cover_card.webp",
+        "thumbUrl": "/uploads/products/urban-street-court_cover_thumb.webp",
+        "alt": "Urban Street Court (side cover)",
+        "isCover": true,
+        "credit": "Warren Jones on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1551107696-a4b0c5a0d9a2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/urban-street-court_detail.webp",
+        "cardUrl": "/uploads/products/urban-street-court_detail.webp",
+        "thumbUrl": "/uploads/products/urban-street-court_detail_thumb.webp",
+        "alt": "Urban Street Court (upper detail)",
+        "isCover": false,
+        "credit": "Warren Jones on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1551107696-a4b0c5a0d9a2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/urban-street-court_sole.webp",
+        "cardUrl": "/uploads/products/urban-street-court_sole.webp",
+        "thumbUrl": "/uploads/products/urban-street-court_sole_thumb.webp",
+        "alt": "Urban Street Court (sole traction)",
+        "isCover": false,
+        "credit": "Warren Jones on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1551107696-a4b0c5a0d9a2",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Black / White Edition",
+        "hex": "#27272a",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Urban Street Court offers premium craftsmanship, authentic black / white aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Vintage Leather High-Top",
+    "brand": "Stride Originals",
+    "gender": "unisex",
+    "type": "hightop",
+    "mrp": 499900,
+    "price": 349900,
+    "stock": 12,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/vintage-leather-hightop_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/vintage-leather-hightop_cover.webp",
+        "cardUrl": "/uploads/products/vintage-leather-hightop_cover_card.webp",
+        "thumbUrl": "/uploads/products/vintage-leather-hightop_cover_thumb.webp",
+        "alt": "Vintage Leather High-Top (side cover)",
+        "isCover": true,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1552346154-21d32810aba3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/vintage-leather-hightop_detail.webp",
+        "cardUrl": "/uploads/products/vintage-leather-hightop_detail.webp",
+        "thumbUrl": "/uploads/products/vintage-leather-hightop_detail_thumb.webp",
+        "alt": "Vintage Leather High-Top (upper detail)",
+        "isCover": false,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1552346154-21d32810aba3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/vintage-leather-hightop_sole.webp",
+        "cardUrl": "/uploads/products/vintage-leather-hightop_sole.webp",
+        "thumbUrl": "/uploads/products/vintage-leather-hightop_sole_thumb.webp",
+        "alt": "Vintage Leather High-Top (sole traction)",
+        "isCover": false,
+        "credit": "Daniel Storek on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1552346154-21d32810aba3",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Red / White Edition",
+        "hex": "#b91c1c",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Vintage Leather High-Top offers premium craftsmanship, authentic red / white aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Black Canvas High-Top",
+    "brand": "Stride Originals",
+    "gender": "unisex",
+    "type": "hightop",
+    "mrp": 299900,
+    "price": 229900,
+    "stock": 19,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/black-canvas-hightop_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/black-canvas-hightop_cover.webp",
+        "cardUrl": "/uploads/products/black-canvas-hightop_cover_card.webp",
+        "thumbUrl": "/uploads/products/black-canvas-hightop_cover_thumb.webp",
+        "alt": "Black Canvas High-Top (side cover)",
+        "isCover": true,
+        "credit": "Lucas Hoang on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1514989940723-e8e51635b782",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/black-canvas-hightop_detail.webp",
+        "cardUrl": "/uploads/products/black-canvas-hightop_detail.webp",
+        "thumbUrl": "/uploads/products/black-canvas-hightop_detail_thumb.webp",
+        "alt": "Black Canvas High-Top (upper detail)",
+        "isCover": false,
+        "credit": "Lucas Hoang on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1514989940723-e8e51635b782",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/black-canvas-hightop_sole.webp",
+        "cardUrl": "/uploads/products/black-canvas-hightop_sole.webp",
+        "thumbUrl": "/uploads/products/black-canvas-hightop_sole_thumb.webp",
+        "alt": "Black Canvas High-Top (sole traction)",
+        "isCover": false,
+        "credit": "Lucas Hoang on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1514989940723-e8e51635b782",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Black Edition",
+        "hex": "#09090b",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Black Canvas High-Top offers premium craftsmanship, authentic black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Heritage Suede High-Top",
+    "brand": "Stride Originals",
+    "gender": "men",
+    "type": "hightop",
+    "mrp": 549900,
+    "price": 399900,
+    "stock": 26,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/heritage-suede-hightop_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/heritage-suede-hightop_cover.webp",
+        "cardUrl": "/uploads/products/heritage-suede-hightop_cover_card.webp",
+        "thumbUrl": "/uploads/products/heritage-suede-hightop_cover_thumb.webp",
+        "alt": "Heritage Suede High-Top (side cover)",
+        "isCover": true,
+        "credit": "Taylor Smith on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1582588678413-dbf45f4823e9",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/heritage-suede-hightop_detail.webp",
+        "cardUrl": "/uploads/products/heritage-suede-hightop_detail.webp",
+        "thumbUrl": "/uploads/products/heritage-suede-hightop_detail_thumb.webp",
+        "alt": "Heritage Suede High-Top (upper detail)",
+        "isCover": false,
+        "credit": "Taylor Smith on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1582588678413-dbf45f4823e9",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/heritage-suede-hightop_sole.webp",
+        "cardUrl": "/uploads/products/heritage-suede-hightop_sole.webp",
+        "thumbUrl": "/uploads/products/heritage-suede-hightop_sole_thumb.webp",
+        "alt": "Heritage Suede High-Top (sole traction)",
+        "isCover": false,
+        "credit": "Taylor Smith on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1582588678413-dbf45f4823e9",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Grey / Black Edition",
+        "hex": "#4b5563",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Heritage Suede High-Top offers premium craftsmanship, authentic grey / black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Monochrome Pro High-Top",
+    "brand": "Stride Originals",
+    "gender": "men",
+    "type": "hightop",
+    "mrp": 499900,
+    "price": 379900,
+    "stock": 33,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/monochrome-pro-hightop_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/monochrome-pro-hightop_cover.webp",
+        "cardUrl": "/uploads/products/monochrome-pro-hightop_cover_card.webp",
+        "thumbUrl": "/uploads/products/monochrome-pro-hightop_cover_thumb.webp",
+        "alt": "Monochrome Pro High-Top (side cover)",
+        "isCover": true,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1511556532299-8f662fc26c06",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/monochrome-pro-hightop_detail.webp",
+        "cardUrl": "/uploads/products/monochrome-pro-hightop_detail.webp",
+        "thumbUrl": "/uploads/products/monochrome-pro-hightop_detail_thumb.webp",
+        "alt": "Monochrome Pro High-Top (upper detail)",
+        "isCover": false,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1511556532299-8f662fc26c06",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/monochrome-pro-hightop_sole.webp",
+        "cardUrl": "/uploads/products/monochrome-pro-hightop_sole.webp",
+        "thumbUrl": "/uploads/products/monochrome-pro-hightop_sole_thumb.webp",
+        "alt": "Monochrome Pro High-Top (sole traction)",
+        "isCover": false,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1511556532299-8f662fc26c06",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "White / Black Edition",
+        "hex": "#e4e4e7",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Monochrome Pro High-Top offers premium craftsmanship, authentic white / black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Downtown Street High-Top",
+    "brand": "Stride Originals",
+    "gender": "women",
+    "type": "hightop",
+    "mrp": 399900,
+    "price": 299900,
+    "stock": 8,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/downtown-street-hightop_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/downtown-street-hightop_cover.webp",
+        "cardUrl": "/uploads/products/downtown-street-hightop_cover_card.webp",
+        "thumbUrl": "/uploads/products/downtown-street-hightop_cover_thumb.webp",
+        "alt": "Downtown Street High-Top (side cover)",
+        "isCover": true,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1600185365926-3a2ce3cdb9eb",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/downtown-street-hightop_detail.webp",
+        "cardUrl": "/uploads/products/downtown-street-hightop_detail.webp",
+        "thumbUrl": "/uploads/products/downtown-street-hightop_detail_thumb.webp",
+        "alt": "Downtown Street High-Top (upper detail)",
+        "isCover": false,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1600185365926-3a2ce3cdb9eb",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/downtown-street-hightop_sole.webp",
+        "cardUrl": "/uploads/products/downtown-street-hightop_sole.webp",
+        "thumbUrl": "/uploads/products/downtown-street-hightop_sole_thumb.webp",
+        "alt": "Downtown Street High-Top (sole traction)",
+        "isCover": false,
+        "credit": "Dom Hill on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1600185365926-3a2ce3cdb9eb",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Yellow / Mustard Edition",
+        "hex": "#eab308",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Downtown Street High-Top offers premium craftsmanship, authentic yellow / mustard aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Rugged Combat Boot",
+    "brand": "Stride Outdoor",
+    "gender": "men",
+    "type": "boot",
+    "mrp": 699900,
+    "price": 499900,
+    "stock": 15,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/rugged-combat-boot_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/rugged-combat-boot_cover.webp",
+        "cardUrl": "/uploads/products/rugged-combat-boot_cover_card.webp",
+        "thumbUrl": "/uploads/products/rugged-combat-boot_cover_thumb.webp",
+        "alt": "Rugged Combat Boot (side cover)",
+        "isCover": true,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608256246200-53e635b5b65f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/rugged-combat-boot_detail.webp",
+        "cardUrl": "/uploads/products/rugged-combat-boot_detail.webp",
+        "thumbUrl": "/uploads/products/rugged-combat-boot_detail_thumb.webp",
+        "alt": "Rugged Combat Boot (upper detail)",
+        "isCover": false,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608256246200-53e635b5b65f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/rugged-combat-boot_sole.webp",
+        "cardUrl": "/uploads/products/rugged-combat-boot_sole.webp",
+        "thumbUrl": "/uploads/products/rugged-combat-boot_sole_thumb.webp",
+        "alt": "Rugged Combat Boot (sole traction)",
+        "isCover": false,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1608256246200-53e635b5b65f",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Black Leather Edition",
+        "hex": "#18181b",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Rugged Combat Boot offers premium craftsmanship, authentic black leather aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Chelsea Suede Boot",
+    "brand": "Stride Craft",
+    "gender": "unisex",
+    "type": "boot",
+    "mrp": 599900,
+    "price": 449900,
+    "stock": 22,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/chelsea-suede-boot_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/chelsea-suede-boot_cover.webp",
+        "cardUrl": "/uploads/products/chelsea-suede-boot_cover_card.webp",
+        "thumbUrl": "/uploads/products/chelsea-suede-boot_cover_thumb.webp",
+        "alt": "Chelsea Suede Boot (side cover)",
+        "isCover": true,
+        "credit": "Camila Damásio on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1549298916-b41d501d3772",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/chelsea-suede-boot_detail.webp",
+        "cardUrl": "/uploads/products/chelsea-suede-boot_detail.webp",
+        "thumbUrl": "/uploads/products/chelsea-suede-boot_detail_thumb.webp",
+        "alt": "Chelsea Suede Boot (upper detail)",
+        "isCover": false,
+        "credit": "Camila Damásio on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1549298916-b41d501d3772",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/chelsea-suede-boot_sole.webp",
+        "cardUrl": "/uploads/products/chelsea-suede-boot_sole.webp",
+        "thumbUrl": "/uploads/products/chelsea-suede-boot_sole_thumb.webp",
+        "alt": "Chelsea Suede Boot (sole traction)",
+        "isCover": false,
+        "credit": "Camila Damásio on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1549298916-b41d501d3772",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Tan Brown Edition",
+        "hex": "#78350f",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Chelsea Suede Boot offers premium craftsmanship, authentic tan brown aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Alpine Waterproof Boot",
+    "brand": "Stride Outdoor",
+    "gender": "men",
+    "type": "boot",
+    "mrp": 749900,
+    "price": 549900,
+    "stock": 29,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/alpine-waterproof-boot_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/alpine-waterproof-boot_cover.webp",
+        "cardUrl": "/uploads/products/alpine-waterproof-boot_cover_card.webp",
+        "thumbUrl": "/uploads/products/alpine-waterproof-boot_cover_thumb.webp",
+        "alt": "Alpine Waterproof Boot (side cover)",
+        "isCover": true,
+        "credit": "Alina Grubnyak on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1520639888713-7851133b1ed0",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/alpine-waterproof-boot_detail.webp",
+        "cardUrl": "/uploads/products/alpine-waterproof-boot_detail.webp",
+        "thumbUrl": "/uploads/products/alpine-waterproof-boot_detail_thumb.webp",
+        "alt": "Alpine Waterproof Boot (upper detail)",
+        "isCover": false,
+        "credit": "Alina Grubnyak on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1520639888713-7851133b1ed0",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/alpine-waterproof-boot_sole.webp",
+        "cardUrl": "/uploads/products/alpine-waterproof-boot_sole.webp",
+        "thumbUrl": "/uploads/products/alpine-waterproof-boot_sole_thumb.webp",
+        "alt": "Alpine Waterproof Boot (sole traction)",
+        "isCover": false,
+        "credit": "Alina Grubnyak on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1520639888713-7851133b1ed0",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Dark Brown Edition",
+        "hex": "#451a03",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Alpine Waterproof Boot offers premium craftsmanship, authentic dark brown aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Desert Walker Boot",
+    "brand": "Stride Outdoor",
+    "gender": "men",
+    "type": "boot",
+    "mrp": 529900,
+    "price": 399900,
+    "stock": 36,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/desert-walker-boot_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/desert-walker-boot_cover.webp",
+        "cardUrl": "/uploads/products/desert-walker-boot_cover_card.webp",
+        "thumbUrl": "/uploads/products/desert-walker-boot_cover_thumb.webp",
+        "alt": "Desert Walker Boot (side cover)",
+        "isCover": true,
+        "credit": "Lars Kienle on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1606107557195-0e29a4b5b4aa",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/desert-walker-boot_detail.webp",
+        "cardUrl": "/uploads/products/desert-walker-boot_detail.webp",
+        "thumbUrl": "/uploads/products/desert-walker-boot_detail_thumb.webp",
+        "alt": "Desert Walker Boot (upper detail)",
+        "isCover": false,
+        "credit": "Lars Kienle on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1606107557195-0e29a4b5b4aa",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/desert-walker-boot_sole.webp",
+        "cardUrl": "/uploads/products/desert-walker-boot_sole.webp",
+        "thumbUrl": "/uploads/products/desert-walker-boot_sole_thumb.webp",
+        "alt": "Desert Walker Boot (sole traction)",
+        "isCover": false,
+        "credit": "Lars Kienle on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1606107557195-0e29a4b5b4aa",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Sand Beige Edition",
+        "hex": "#d4d4d8",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Desert Walker Boot offers premium craftsmanship, authentic sand beige aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Nordic Leather Boot",
+    "brand": "Stride Craft",
+    "gender": "women",
+    "type": "boot",
+    "mrp": 649900,
+    "price": 479900,
+    "stock": 11,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/nordic-leather-boot_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/nordic-leather-boot_cover.webp",
+        "cardUrl": "/uploads/products/nordic-leather-boot_cover_card.webp",
+        "thumbUrl": "/uploads/products/nordic-leather-boot_cover_thumb.webp",
+        "alt": "Nordic Leather Boot (side cover)",
+        "isCover": true,
+        "credit": "Apostolos Vamvouras on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543163521-1bf539c55dd2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/nordic-leather-boot_detail.webp",
+        "cardUrl": "/uploads/products/nordic-leather-boot_detail.webp",
+        "thumbUrl": "/uploads/products/nordic-leather-boot_detail_thumb.webp",
+        "alt": "Nordic Leather Boot (upper detail)",
+        "isCover": false,
+        "credit": "Apostolos Vamvouras on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543163521-1bf539c55dd2",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/nordic-leather-boot_sole.webp",
+        "cardUrl": "/uploads/products/nordic-leather-boot_sole.webp",
+        "thumbUrl": "/uploads/products/nordic-leather-boot_sole_thumb.webp",
+        "alt": "Nordic Leather Boot (sole traction)",
+        "isCover": false,
+        "credit": "Apostolos Vamvouras on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543163521-1bf539c55dd2",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Burgundy Edition",
+        "hex": "#881337",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Nordic Leather Boot offers premium craftsmanship, authentic burgundy aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Penny Leather Loafer",
+    "brand": "Stride Formal",
+    "gender": "men",
+    "type": "loafer",
+    "mrp": 499900,
+    "price": 349900,
+    "stock": 18,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/penny-leather-loafer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/penny-leather-loafer_cover.webp",
+        "cardUrl": "/uploads/products/penny-leather-loafer_cover_card.webp",
+        "thumbUrl": "/uploads/products/penny-leather-loafer_cover_thumb.webp",
+        "alt": "Penny Leather Loafer (side cover)",
+        "isCover": true,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1533867617858-e7b97e060509",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/penny-leather-loafer_detail.webp",
+        "cardUrl": "/uploads/products/penny-leather-loafer_detail.webp",
+        "thumbUrl": "/uploads/products/penny-leather-loafer_detail_thumb.webp",
+        "alt": "Penny Leather Loafer (upper detail)",
+        "isCover": false,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1533867617858-e7b97e060509",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/penny-leather-loafer_sole.webp",
+        "cardUrl": "/uploads/products/penny-leather-loafer_sole.webp",
+        "thumbUrl": "/uploads/products/penny-leather-loafer_sole_thumb.webp",
+        "alt": "Penny Leather Loafer (sole traction)",
+        "isCover": false,
+        "credit": "Girma Nigusse on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1533867617858-e7b97e060509",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Cognac Brown Edition",
+        "hex": "#9a3412",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Slip-On Moccasin",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Penny Leather Loafer offers premium craftsmanship, authentic cognac brown aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Formal Dress Loafer",
+    "brand": "Stride Formal",
+    "gender": "men",
+    "type": "loafer",
+    "mrp": 549900,
+    "price": 399900,
+    "stock": 25,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/formal-dress-loafer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/formal-dress-loafer_cover.webp",
+        "cardUrl": "/uploads/products/formal-dress-loafer_cover_card.webp",
+        "thumbUrl": "/uploads/products/formal-dress-loafer_cover_thumb.webp",
+        "alt": "Formal Dress Loafer (side cover)",
+        "isCover": true,
+        "credit": "Wu Yi on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560343090-f0409e92791a",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/formal-dress-loafer_detail.webp",
+        "cardUrl": "/uploads/products/formal-dress-loafer_detail.webp",
+        "thumbUrl": "/uploads/products/formal-dress-loafer_detail_thumb.webp",
+        "alt": "Formal Dress Loafer (upper detail)",
+        "isCover": false,
+        "credit": "Wu Yi on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560343090-f0409e92791a",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/formal-dress-loafer_sole.webp",
+        "cardUrl": "/uploads/products/formal-dress-loafer_sole.webp",
+        "thumbUrl": "/uploads/products/formal-dress-loafer_sole_thumb.webp",
+        "alt": "Formal Dress Loafer (sole traction)",
+        "isCover": false,
+        "credit": "Wu Yi on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1560343090-f0409e92791a",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Polished Black Edition",
+        "hex": "#18181b",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Slip-On Moccasin",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Formal Dress Loafer offers premium craftsmanship, authentic polished black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Suede Driving Loafer",
+    "brand": "Stride Craft",
+    "gender": "men",
+    "type": "loafer",
+    "mrp": 399900,
+    "price": 299900,
+    "stock": 32,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/suede-driving-loafer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/suede-driving-loafer_cover.webp",
+        "cardUrl": "/uploads/products/suede-driving-loafer_cover_card.webp",
+        "thumbUrl": "/uploads/products/suede-driving-loafer_cover_thumb.webp",
+        "alt": "Suede Driving Loafer (side cover)",
+        "isCover": true,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595341888016-a392ef81b7de",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/suede-driving-loafer_detail.webp",
+        "cardUrl": "/uploads/products/suede-driving-loafer_detail.webp",
+        "thumbUrl": "/uploads/products/suede-driving-loafer_detail_thumb.webp",
+        "alt": "Suede Driving Loafer (upper detail)",
+        "isCover": false,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595341888016-a392ef81b7de",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/suede-driving-loafer_sole.webp",
+        "cardUrl": "/uploads/products/suede-driving-loafer_sole.webp",
+        "thumbUrl": "/uploads/products/suede-driving-loafer_sole_thumb.webp",
+        "alt": "Suede Driving Loafer (sole traction)",
+        "isCover": false,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1595341888016-a392ef81b7de",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Navy Blue Edition",
+        "hex": "#1e3a8a",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Slip-On Moccasin",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Suede Driving Loafer offers premium craftsmanship, authentic navy blue aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Tassel Classic Loafer",
+    "brand": "Stride Formal",
+    "gender": "men",
+    "type": "loafer",
+    "mrp": 499900,
+    "price": 379900,
+    "stock": 7,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/tassel-classic-loafer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/tassel-classic-loafer_cover.webp",
+        "cardUrl": "/uploads/products/tassel-classic-loafer_cover_card.webp",
+        "thumbUrl": "/uploads/products/tassel-classic-loafer_cover_thumb.webp",
+        "alt": "Tassel Classic Loafer (side cover)",
+        "isCover": true,
+        "credit": "Ksenia Chernaya on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515347619252-60a4bf4fff4f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/tassel-classic-loafer_detail.webp",
+        "cardUrl": "/uploads/products/tassel-classic-loafer_detail.webp",
+        "thumbUrl": "/uploads/products/tassel-classic-loafer_detail_thumb.webp",
+        "alt": "Tassel Classic Loafer (upper detail)",
+        "isCover": false,
+        "credit": "Ksenia Chernaya on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515347619252-60a4bf4fff4f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/tassel-classic-loafer_sole.webp",
+        "cardUrl": "/uploads/products/tassel-classic-loafer_sole.webp",
+        "thumbUrl": "/uploads/products/tassel-classic-loafer_sole_thumb.webp",
+        "alt": "Tassel Classic Loafer (sole traction)",
+        "isCover": false,
+        "credit": "Ksenia Chernaya on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1515347619252-60a4bf4fff4f",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Oxblood Brown Edition",
+        "hex": "#451a03",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Slip-On Moccasin",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Tassel Classic Loafer offers premium craftsmanship, authentic oxblood brown aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Monk Strap Loafer",
+    "brand": "Stride Formal",
+    "gender": "women",
+    "type": "loafer",
+    "mrp": 449900,
+    "price": 329900,
+    "stock": 14,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/monk-strap-loafer_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/monk-strap-loafer_cover.webp",
+        "cardUrl": "/uploads/products/monk-strap-loafer_cover_card.webp",
+        "thumbUrl": "/uploads/products/monk-strap-loafer_cover_thumb.webp",
+        "alt": "Monk Strap Loafer (side cover)",
+        "isCover": true,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1519415943484-9fa1873496d4",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/monk-strap-loafer_detail.webp",
+        "cardUrl": "/uploads/products/monk-strap-loafer_detail.webp",
+        "thumbUrl": "/uploads/products/monk-strap-loafer_detail_thumb.webp",
+        "alt": "Monk Strap Loafer (upper detail)",
+        "isCover": false,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1519415943484-9fa1873496d4",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/monk-strap-loafer_sole.webp",
+        "cardUrl": "/uploads/products/monk-strap-loafer_sole.webp",
+        "thumbUrl": "/uploads/products/monk-strap-loafer_sole_thumb.webp",
+        "alt": "Monk Strap Loafer (sole traction)",
+        "isCover": false,
+        "credit": "NordWood Themes on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1519415943484-9fa1873496d4",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Tan Edition",
+        "hex": "#b45309",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Full Grain Hand-Finished Leather",
+      "soleMaterial": "Ultra-Responsive Cushioning EVA",
+      "closure": "Slip-On Moccasin",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Monk Strap Loafer offers premium craftsmanship, authentic tan aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Vibram Lug Trail",
+    "brand": "Stride Outdoor",
+    "gender": "unisex",
+    "type": "trail",
+    "mrp": 599900,
+    "price": 449900,
+    "stock": 21,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/vibram-lug-trail_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/vibram-lug-trail_cover.webp",
+        "cardUrl": "/uploads/products/vibram-lug-trail_cover_card.webp",
+        "thumbUrl": "/uploads/products/vibram-lug-trail_cover_thumb.webp",
+        "alt": "Vibram Lug Trail (side cover)",
+        "isCover": true,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1575537302964-96cd47c06b1b",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/vibram-lug-trail_detail.webp",
+        "cardUrl": "/uploads/products/vibram-lug-trail_detail.webp",
+        "thumbUrl": "/uploads/products/vibram-lug-trail_detail_thumb.webp",
+        "alt": "Vibram Lug Trail (upper detail)",
+        "isCover": false,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1575537302964-96cd47c06b1b",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/vibram-lug-trail_sole.webp",
+        "cardUrl": "/uploads/products/vibram-lug-trail_sole.webp",
+        "thumbUrl": "/uploads/products/vibram-lug-trail_sole_thumb.webp",
+        "alt": "Vibram Lug Trail (sole traction)",
+        "isCover": false,
+        "credit": "Usama Akram on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1575537302964-96cd47c06b1b",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Grey / Black Edition",
+        "hex": "#3f3f46",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "High-Traction Lugged Vibram Compound",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Vibram Lug Trail offers premium craftsmanship, authentic grey / black aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": true
+  },
+  {
+    "name": "Peak Summit Trail",
+    "brand": "Stride Outdoor",
+    "gender": "men",
+    "type": "trail",
+    "mrp": 569900,
+    "price": 429900,
+    "stock": 28,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/peak-summit-trail_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/peak-summit-trail_cover.webp",
+        "cardUrl": "/uploads/products/peak-summit-trail_cover_card.webp",
+        "thumbUrl": "/uploads/products/peak-summit-trail_cover_thumb.webp",
+        "alt": "Peak Summit Trail (side cover)",
+        "isCover": true,
+        "credit": "Lefteris kallergis on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1512990414788-d97cb4a25db3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/peak-summit-trail_detail.webp",
+        "cardUrl": "/uploads/products/peak-summit-trail_detail.webp",
+        "thumbUrl": "/uploads/products/peak-summit-trail_detail_thumb.webp",
+        "alt": "Peak Summit Trail (upper detail)",
+        "isCover": false,
+        "credit": "Lefteris kallergis on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1512990414788-d97cb4a25db3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/peak-summit-trail_sole.webp",
+        "cardUrl": "/uploads/products/peak-summit-trail_sole.webp",
+        "thumbUrl": "/uploads/products/peak-summit-trail_sole_thumb.webp",
+        "alt": "Peak Summit Trail (sole traction)",
+        "isCover": false,
+        "credit": "Lefteris kallergis on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1512990414788-d97cb4a25db3",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Olive Green Edition",
+        "hex": "#365314",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "High-Traction Lugged Vibram Compound",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Peak Summit Trail offers premium craftsmanship, authentic olive green aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Rocky Ridge Trail",
+    "brand": "Stride Outdoor",
+    "gender": "women",
+    "type": "trail",
+    "mrp": 469900,
+    "price": 349900,
+    "stock": 35,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/rocky-ridge-trail_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/rocky-ridge-trail_cover.webp",
+        "cardUrl": "/uploads/products/rocky-ridge-trail_cover_card.webp",
+        "thumbUrl": "/uploads/products/rocky-ridge-trail_cover_thumb.webp",
+        "alt": "Rocky Ridge Trail (side cover)",
+        "isCover": true,
+        "credit": "Malvestida on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1587563871167-1ee9c731aefb",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/rocky-ridge-trail_detail.webp",
+        "cardUrl": "/uploads/products/rocky-ridge-trail_detail.webp",
+        "thumbUrl": "/uploads/products/rocky-ridge-trail_detail_thumb.webp",
+        "alt": "Rocky Ridge Trail (upper detail)",
+        "isCover": false,
+        "credit": "Malvestida on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1587563871167-1ee9c731aefb",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/rocky-ridge-trail_sole.webp",
+        "cardUrl": "/uploads/products/rocky-ridge-trail_sole.webp",
+        "thumbUrl": "/uploads/products/rocky-ridge-trail_sole_thumb.webp",
+        "alt": "Rocky Ridge Trail (sole traction)",
+        "isCover": false,
+        "credit": "Malvestida on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1587563871167-1ee9c731aefb",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Teal / Coral Edition",
+        "hex": "#0d9488",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "High-Traction Lugged Vibram Compound",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Rocky Ridge Trail offers premium craftsmanship, authentic teal / coral aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Canyon Explorer Trail",
+    "brand": "Stride Outdoor",
+    "gender": "men",
+    "type": "trail",
+    "mrp": 519900,
+    "price": 389900,
+    "stock": 10,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/canyon-explorer-trail_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/canyon-explorer-trail_cover.webp",
+        "cardUrl": "/uploads/products/canyon-explorer-trail_cover_card.webp",
+        "thumbUrl": "/uploads/products/canyon-explorer-trail_cover_thumb.webp",
+        "alt": "Canyon Explorer Trail (side cover)",
+        "isCover": true,
+        "credit": "Nathan Dumlao on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1539185441755-769473a23570",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/canyon-explorer-trail_detail.webp",
+        "cardUrl": "/uploads/products/canyon-explorer-trail_detail.webp",
+        "thumbUrl": "/uploads/products/canyon-explorer-trail_detail_thumb.webp",
+        "alt": "Canyon Explorer Trail (upper detail)",
+        "isCover": false,
+        "credit": "Nathan Dumlao on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1539185441755-769473a23570",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/canyon-explorer-trail_sole.webp",
+        "cardUrl": "/uploads/products/canyon-explorer-trail_sole.webp",
+        "thumbUrl": "/uploads/products/canyon-explorer-trail_sole_thumb.webp",
+        "alt": "Canyon Explorer Trail (sole traction)",
+        "isCover": false,
+        "credit": "Nathan Dumlao on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1539185441755-769473a23570",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Earth Brown Edition",
+        "hex": "#713f12",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "High-Traction Lugged Vibram Compound",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Canyon Explorer Trail offers premium craftsmanship, authentic earth brown aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  },
+  {
+    "name": "Cross Terrain Walker",
+    "brand": "Stride Outdoor",
+    "gender": "unisex",
+    "type": "trail",
+    "mrp": 489900,
+    "price": 369900,
+    "stock": 17,
+    "sizes": [
+      5,
+      5.5,
+      6,
+      6.5,
+      7,
+      7.5,
+      8,
+      8.5,
+      9,
+      9.5,
+      10,
+      10.5,
+      11
+    ],
+    "image": "/uploads/products/cross-terrain-walker_cover_card.webp",
+    "images": [
+      {
+        "url": "/uploads/products/cross-terrain-walker_cover.webp",
+        "cardUrl": "/uploads/products/cross-terrain-walker_cover_card.webp",
+        "thumbUrl": "/uploads/products/cross-terrain-walker_cover_thumb.webp",
+        "alt": "Cross Terrain Walker (side cover)",
+        "isCover": true,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543508282-6319a3e2621f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/cross-terrain-walker_detail.webp",
+        "cardUrl": "/uploads/products/cross-terrain-walker_detail.webp",
+        "thumbUrl": "/uploads/products/cross-terrain-walker_detail_thumb.webp",
+        "alt": "Cross Terrain Walker (upper detail)",
+        "isCover": false,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543508282-6319a3e2621f",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "/uploads/products/cross-terrain-walker_sole.webp",
+        "cardUrl": "/uploads/products/cross-terrain-walker_sole.webp",
+        "thumbUrl": "/uploads/products/cross-terrain-walker_sole_thumb.webp",
+        "alt": "Cross Terrain Walker (sole traction)",
+        "isCover": false,
+        "credit": "Fachry Zella Devandra on Unsplash",
+        "licence": "Unsplash Free License",
+        "sourceUrl": "https://unsplash.com/photos/1543508282-6319a3e2621f",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "colorways": [
+      {
+        "name": "Slate Blue Edition",
+        "hex": "#475569",
+        "imageIndex": 0
+      },
+      {
+        "name": "Texture Detail",
+        "hex": "#64748b",
+        "imageIndex": 1
+      },
+      {
+        "name": "Sole & Grip",
+        "hex": "#334155",
+        "imageIndex": 2
+      }
+    ],
+    "highlights": {
+      "upperMaterial": "Breathable Engineered Knit & TPU",
+      "soleMaterial": "High-Traction Lugged Vibram Compound",
+      "closure": "Reinforced Lace-Up",
+      "fit": "Standard Regular UK Fit"
+    },
+    "desc": "The Cross Terrain Walker offers premium craftsmanship, authentic slate blue aesthetics, and superior comfort engineered for Indian conditions.",
+    "featured": false
+  }
+]

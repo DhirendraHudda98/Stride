@@ -1,0 +1,28 @@
+{
+  "name": "stride",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/seed.js",
+    "images:audit": "node server/audit_images.js",
+    "images:contact-sheet": "node server/generate_contact_sheet.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "multer": "^2.4.0",
+    "otplib": "^13.5.0",
+    "pdfkit": "^0.20.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "file-type": "^22.2.0",
+    "sharp": "^0.35.5"
+  }
+}

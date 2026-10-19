@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stride – shoe store</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9eeea;--ink:#1b2421;--mut:#5d6b65;--card:#f6f8f6;--line:#cfd8d2;--acc:#2b4bff;--onacc:#fff;--bad:#c2312d}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121816;--ink:#e8efeb;--mut:#93a39b;--card:#1a2320;--line:#2b3833;--acc:#7b92ff;--onacc:#0b1020;--bad:#ff8a84}}
+:root[data-theme=dark]{--bg:#121816;--ink:#e8efeb;--mut:#93a39b;--card:#1a2320;--line:#2b3833;--acc:#7b92ff;--onacc:#0b1020;--bad:#ff8a84}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.5}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}:focus-visible{outline:2px solid var(--acc);outline-offset:2px}a{color:var(--acc)}
+header{display:flex;align-items:center;gap:16px;padding:12px 5vw;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5;flex-wrap:wrap}
+header b{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;margin-right:auto;cursor:pointer}
+.nav{background:none;border:0;padding:6px 2px;color:var(--mut)}.nav.on{color:var(--ink);border-bottom:2px solid var(--acc)}
+.btn{background:var(--acc);color:var(--onacc);border:0;border-radius:8px;padding:10px 18px;font-weight:600}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}.btn.sm{padding:5px 10px;font-size:.85rem}.btn.bad{background:none;color:var(--bad);border:1px solid var(--bad)}
+.shop{display:grid;grid-template-columns:minmax(300px,1fr) 1.2fr;gap:4vw;padding:3vw 5vw}
+.stage{position:sticky;top:76px;align-self:start}
+.gallery-panel{width:100%;aspect-ratio:1.15;border-radius:20px;background:var(--card);border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative}
+.main-img-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.product-hero-img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.product-hero-img:hover{transform:scale(1.03)}
+.img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
+h1{font-size:clamp(1.9rem,4.5vw,3.2rem);line-height:1;letter-spacing:-.04em;margin:14px 0 6px;font-weight:800}.h2{font-size:2rem;margin:0 0 8px}
+.price{font-size:1.4rem;font-weight:600;margin:4px 0}.mut{color:var(--mut)}s{color:var(--mut);font-weight:400;font-size:.9em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;align-content:start;margin-top:12px}
+.cardw{position:relative}.card{width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:left}.card.sel{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc)}
+.heart{position:absolute;right:8px;top:8px;border:0;background:var(--card);border-radius:99px;width:32px;height:32px;font-size:1.1rem;line-height:1}
+.sw{height:115px;border-radius:8px;margin-bottom:10px;background:var(--card);overflow:hidden;display:flex;align-items:center;justify-content:center}.sw img{width:100%;height:100%;object-fit:cover;transition:transform .2s ease}.card:hover .sw img{transform:scale(1.05)}.badge{font-size:.8rem;color:var(--mut)}.tag{font-size:.75rem;background:var(--acc);color:var(--onacc);border-radius:99px;padding:1px 8px;margin-left:6px}
+.szs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}.sz{min-width:46px;padding:8px 0;border:1px solid var(--line);background:var(--card);border-radius:8px}.sz.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;align-items:end}.filters label{font-size:.8rem;color:var(--mut)}
+.wrap{padding:3vw 5vw}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.tabs button{border:1px solid var(--line);background:none;border-radius:99px;padding:6px 16px}.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:16px 0}.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}.stat b{display:block;font-size:1.6rem}
+.two{display:grid;grid-template-columns:2fr 1fr;gap:14px}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.bars{display:flex;align-items:flex-end;gap:8px;height:150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px 8px}
+.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:.75rem;color:var(--mut)}.bars i{width:100%;background:var(--acc);border-radius:4px 4px 0 0;min-height:2px;margin-bottom:4px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tbl{overflow:auto;max-height:560px;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0 22px}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}th{position:sticky;top:0;background:var(--card)}
+input,select,textarea{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 12px;width:100%}input[type=color]{padding:2px;height:40px}input[type=checkbox]{width:auto}input[type=range]{padding:0}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:120px}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--card);border-left:1px solid var(--line);padding:20px;transform:translateX(100%);transition:transform .25s;z-index:10;overflow:auto}.drawer.open{transform:none}
+.line{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);align-items:center}.pill{padding:2px 10px;border-radius:99px;border:1px solid var(--line);font-size:.8rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;z-index:30;max-width:90%}
+.auth{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 62px)}.aside{padding:8vw 6vw;background:linear-gradient(160deg,var(--acc),#121a3d);color:#fff;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.aside h1{font-size:clamp(2.4rem,5vw,4rem);margin:0}.aside li{margin:6px 0}.box{padding:6vw;display:flex;flex-direction:column;justify-content:center;max-width:520px;width:100%;margin:auto}
+.err{color:var(--bad);min-height:1.4em;font-size:.92rem}.fld{display:block;margin-bottom:12px;font-size:.85rem;color:var(--mut)}.fld input,.fld select,.fld textarea{margin-top:4px;color:var(--ink)}
+dialog{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;max-width:560px;width:92%;padding:20px}dialog::backdrop{background:rgba(0,0,0,.5)}
+.acc-layout{display:grid;grid-template-columns:250px 1fr;gap:28px;margin-top:20px}
+.acc-nav{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;height:fit-content;position:sticky;top:80px}
+.acc-nav button{text-align:left;padding:10px 14px;border-radius:8px;border:0;background:none;font-weight:600;display:flex;align-items:center;justify-content:space-between;color:var(--mut)}
+.acc-nav button:hover{background:var(--bg);color:var(--ink)}
+.acc-nav button.on{background:var(--acc);color:var(--onacc)}
+.acc-mob-tabs{display:none;overflow-x:auto;white-space:nowrap;gap:8px;padding-bottom:8px;margin-bottom:16px;scrollbar-width:thin}
+.acc-mob-tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:8px 16px;font-weight:600}
+.acc-mob-tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.avatar-circle{width:38px;height:38px;border-radius:50%;background:var(--acc);color:var(--onacc);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;text-transform:uppercase;overflow:hidden;flex-shrink:0;border:2px solid var(--card)}
+.avatar-circle img{width:100%;height:100%;object-fit:cover}
+.avatar-lg{width:84px;height:84px;font-size:2rem}
+.user-menu-btn{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 12px 4px 4px;cursor:pointer}
+.user-menu-btn:hover{border-color:var(--ink)}
+.dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;min-width:210px;box-shadow:0 12px 28px rgba(0,0,0,.15);z-index:25;display:flex;flex-direction:column}
+.dropdown a,.dropdown button{padding:10px 14px;border-radius:8px;border:0;background:none;text-align:left;font-weight:600;color:var(--ink);text-decoration:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.dropdown a:hover,.dropdown button:hover{background:var(--bg)}
+.dropdown .divider{height:1px;background:var(--line);margin:4px 0}
+.notif-bell{position:relative;background:none;border:1px solid var(--line);border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem}
+.notif-badge{position:absolute;top:-4px;right:-4px;background:var(--bad);color:#fff;border-radius:99px;padding:1px 6px;font-size:.7rem;font-weight:700}
+.progress-bar-wrap{width:100%;background:var(--line);height:8px;border-radius:99px;overflow:hidden;margin:10px 0}
+.progress-bar-fill{background:var(--acc);height:100%;border-radius:99px;transition:width .3s}
+.addr-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card);position:relative;display:flex;flex-direction:column;justify-content:space-between}
+.addr-card.is-default{border:2px solid var(--acc)}
+.addr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}
+[hidden]{display:none!important}
+@media(max-width:800px){.shop{grid-template-columns:1fr}.stage{position:static}.auth{grid-template-columns:1fr}.aside{padding:8vw 6vw}.acc-layout{grid-template-columns:1fr}.acc-nav{display:none}.acc-mob-tabs{display:flex}}
+@media(max-width:480px){.filters{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:10px}.shop{padding:12px 14px}.wrap{padding:12px 14px}header{padding:10px 14px}.szs{gap:6px}.sz{min-width:38px;padding:6px 0;font-size:.82rem}.card{padding:10px}.sw{height:95px}}
+@media(prefers-reduced-motion:reduce){.drawer{transition:none}*{animation:none!important;transition:none!important}}
+
+/* Phase 3: Timeline & Size Guide styles */
+.tl-wrap{display:flex;align-items:center;justify-content:space-between;position:relative;margin:18px 0 10px;padding:0 8px}
+.tl-track{position:absolute;top:14px;left:24px;right:24px;height:3px;background:var(--line);z-index:1}
+.tl-track-fill{position:absolute;top:14px;left:24px;height:3px;background:#16a34a;z-index:2;transition:width .4s}
+.tl-step{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;width:64px;text-align:center}
+.tl-dot{width:28px;height:28px;border-radius:50%;background:var(--card);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--mut);transition:all .3s}
+.tl-step.done .tl-dot{background:#16a34a;border-color:#16a34a;color:#fff}
+.tl-step.curr .tl-dot{background:var(--acc);border-color:var(--acc);color:#fff;box-shadow:0 0 0 4px rgba(22,163,74,.2)}
+.tl-lbl{font-size:.72rem;color:var(--mut);font-weight:600;line-height:1.2}
+.tl-step.done .tl-lbl,.tl-step.curr .tl-lbl{color:var(--ink)}
+.pin-box{display:flex;gap:6px;margin:12px 0 6px;align-items:center}
+.pin-box input{flex:1;max-width:180px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:.88rem}
+.pin-res{font-size:.82rem;margin-bottom:8px;font-weight:500}
+.sz-header{display:flex;justify-content:space-between;align-items:center;margin:8px 0 4px}
+.sz-guide-link{font-size:.8rem;color:var(--acc);text-decoration:none;cursor:pointer;font-weight:600}
+.sz-guide-link:hover{text-decoration:underline}
+.order-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card);margin-bottom:14px}
+
+/* Phase 4: Product Gallery, Colorways & Card Hover */
+.sw{height:140px;border-radius:10px;margin-bottom:10px;background:var(--card);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.sw img{width:100%;height:100%;object-fit:cover;transition:opacity .25s ease, transform .25s ease}
+.sw .card-img-primary{position:absolute;inset:0;opacity:1;z-index:1}
+.sw .card-img-secondary{position:absolute;inset:0;opacity:0;z-index:2}
+.card:hover .sw .card-img-secondary{opacity:1}
+.card:hover .sw .card-img-primary{opacity:0}
+.card:hover .sw img{transform:scale(1.04)}
+
+.thumb-strip{display:flex;gap:8px;overflow-x:auto;padding:8px 0;margin-top:8px}
+.thumb-btn{width:56px;height:56px;border-radius:8px;border:2px solid var(--line);background:var(--card);overflow:hidden;padding:0;cursor:pointer;flex-shrink:0;transition:border-color .2s}
+.thumb-btn.on{border-color:var(--acc)}
+.thumb-btn img{width:100%;height:100%;object-fit:cover}
+
+.colorways-wrap{margin:10px 0}
+.swatches{display:flex;gap:8px;margin-top:6px}
+.swatch{width:32px;height:32px;border-radius:50%;border:2px solid var(--card);box-shadow:0 0 0 1px var(--line);cursor:pointer;padding:0;transition:transform .2s, box-shadow .2s}
+.swatch.on{transform:scale(1.15);box-shadow:0 0 0 2px var(--acc)}
+
+.photo-credit{font-size:.74rem;color:var(--mut);margin-top:6px;font-style:italic}
+.highlights-panel{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;font-size:.84rem}
+.hl-item b{display:block;color:var(--ink);font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+.hl-item span{color:var(--mut)}
+
+.lightbox-modal{max-width:85vw;max-height:85vh;border-radius:16px;border:1px solid var(--line);padding:10px;background:var(--card)}
+.lightbox-img{max-width:80vw;max-height:75vh;object-fit:contain;border-radius:12px;display:block;margin:auto}
+
+/* Autocomplete */
+.srch-wrap{position:relative;width:100%}
+.ac-dropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.18);z-index:20;overflow:hidden;display:none}
+.ac-dropdown.open{display:block}
+.ac-item{display:flex;align-items:center;gap:10px;padding:8px 12px;cursor:pointer;transition:background .12s;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line)}
+.ac-item:last-child{border-bottom:0}
+.ac-item:hover,.ac-item.focus{background:var(--bg)}
+.ac-thumb{width:44px;height:44px;border-radius:6px;object-fit:cover;background:var(--bg);flex-shrink:0}
+.ac-thumb-ph{width:44px;height:44px;border-radius:6px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.ac-meta{flex:1;min-width:0}
+.ac-name{font-weight:600;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ac-sub{font-size:.76rem;color:var(--mut)}
+.ac-price{font-weight:700;font-size:.86rem;flex-shrink:0}
+.ac-footer{padding:8px 14px;font-size:.8rem;color:var(--acc);font-weight:600;cursor:pointer;display:block;text-align:center}
+.ac-footer:hover{background:var(--bg)}
+
+/* Inline Reviews Panel */
+.rev-panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:16px 0}
+.rev-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.rev-summary{display:flex;align-items:center;gap:14px}
+.rev-big-score{font-size:2.4rem;font-weight:800;line-height:1}
+.rev-hist{flex:1}
+.rev-bar-row{display:flex;align-items:center;gap:6px;font-size:.76rem;margin:2px 0}
+.rev-bar-bg{flex:1;height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.rev-bar-fill{height:100%;border-radius:99px;background:#f59e0b;transition:width .4s}
+.rev-list{display:flex;flex-direction:column;gap:12px;max-height:320px;overflow-y:auto;padding-right:4px;scrollbar-width:thin}
+.rev-card{border:1px solid var(--line);border-radius:10px;padding:12px}
+.rev-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.rev-name{font-weight:700;font-size:.9rem}
+.rev-stars-row{color:#f59e0b;font-size:.95rem;letter-spacing:1px}
+.rev-date{font-size:.74rem;color:var(--mut);margin-left:auto}
+.rev-body{font-size:.88rem;color:var(--ink);line-height:1.5}
+.rev-verified{font-size:.72rem;background:#dcfce7;color:#15803d;border-radius:4px;padding:1px 6px;font-weight:600}
+.dark .rev-verified,[data-theme=dark] .rev-verified{background:#14532d;color:#86efac}
+
+/* Star Picker */
+.star-pick{display:flex;gap:4px;margin:6px 0 12px}
+.star-pick button{font-size:1.6rem;background:none;border:0;padding:0;line-height:1;color:var(--line);cursor:pointer;transition:color .1s,transform .1s}
+.star-pick button.on,.star-pick button:hover,.star-pick button:focus{color:#f59e0b;transform:scale(1.15)}
+.rev-write{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}
+</style></head><body>
+<header><b id="logo">Stride</b>
+ <button class="nav on" data-r="/">Shop</button>
+ <button class="btn ghost sm" id="theme" aria-label="Switch light or dark theme">Theme</button>
+ 
+ <div id="authNavWrap" style="display:flex;align-items:center;gap:12px;position:relative">
+   <button class="nav" data-r="/login" id="navSignIn">Sign in</button>
+   
+   <button class="notif-bell" id="notifBell" aria-label="Notifications" hidden>
+     🔔<span class="notif-badge" id="notifBadge" hidden>0</span>
+   </button>
+   
+   <div id="userMenuWrap" style="position:relative" hidden>
+     <button class="user-menu-btn" id="userMenuToggle" aria-haspopup="true" aria-expanded="false">
+       <span class="avatar-circle" id="hdrAvatar">S</span>
+       <span id="hdrUserName" style="font-weight:600">Account</span>
+       <span style="font-size:.75rem">▼</span>
+     </button>
+     <div class="dropdown" id="userMenuDropdown" hidden>
+       <a href="#/account/orders">📦 My orders</a>
+       <a href="#/account/wishlist">♥ Wishlist</a>
+       <a href="#/account/profile">👤 Profile</a>
+       <a href="#/account/addresses">📍 Addresses</a>
+       <a href="#/account/security">🔒 Security</a>
+       <a href="#/account/settings">⚙️ Settings</a>
+       <a href="#/admin" id="menuAdminLink" hidden>⚡ Admin dashboard</a>
+       <div class="divider"></div>
+       <button id="menuSignOut" style="color:var(--bad)">Sign out</button>
+     </div>
+   </div>
+ </div>
+
+ <button class="btn ghost" id="cartBtn">Cart (<span id="cc">0</span>)</button>
+</header>
+
+<main id="shop" class="shop">
+ <section class="stage">
+  <div id="productGallery" class="gallery-panel" aria-label="Product photography" style="cursor:zoom-in">
+   <div id="mainImageWrap" class="main-img-wrap">
+     <div id="imgPlaceholder" class="img-placeholder">
+       <span id="imgPlaceholderInitial" style="font-size:3.5rem;font-weight:800;color:var(--mut)">👟</span>
+       <span id="imgPlaceholderText" class="mut" style="font-size:.9rem;margin-top:6px">Stride Footwear</span>
+     </div>
+   </div>
+  </div>
+  <div id="thumbStrip" class="thumb-strip" hidden></div>
+  <div id="photoCredit" class="photo-credit"></div>
+  <div class="mut" id="pb"></div><h1 id="pn"></h1><div id="pr"></div><p class="mut" id="pd"></p><p class="price" id="pp"></p>
+  <div id="colorwaysBox" class="colorways-wrap" hidden>
+    <span style="font-size:.82rem;font-weight:600;color:var(--mut)">Select Colorway</span>
+    <div id="colorSwatches" class="swatches"></div>
+  </div>
+  <div id="highlightsBox" class="highlights-panel" hidden></div>
+  <div class="sz-header">
+     <span style="font-size:.82rem;font-weight:600;color:var(--mut)">Select Size (UK / India)</span>
+     <button type="button" class="btn ghost sm sz-guide-link" id="szGuideBtn">📏 Size Guide</button>
+   </div>
+   <div class="szs" id="sizes" role="group" aria-label="Choose a size"></div>
+   <div class="pin-box">
+     <input id="pdpPin" maxlength="6" pattern="[0-9]{6}" placeholder="Enter 6-digit PIN">
+     <button type="button" class="btn ghost sm" id="pdpPinBtn">Check Delivery</button>
+   </div>
+   <div id="pdpPinRes" class="pin-res" hidden></div>
+   <div class="row"><button class="btn" id="add" style="flex:2">Add to cart</button><button class="btn ghost" id="wish">Save</button></div>
+   <!-- Inline Reviews Panel -->
+   <div id="reviewsPanel" hidden></div>
+ </section>
+ <section>
+  <div class="filters"><div style="grid-column:span 2" class="srch-wrap"><label for="q">Search</label><input id="q" placeholder="Search shoes…" type="search" autocomplete="off" aria-autocomplete="list" aria-controls="acList" aria-expanded="false"><div class="ac-dropdown" id="acList" role="listbox"></div></div>
+   <div><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="new">Newest</option><option value="popular">Best sellers</option><option value="rating">Top rated</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></div>
+   <div><label for="cat">Style</label><select id="cat"><option value="">All styles</option><option>runner</option><option>court</option><option>hightop</option><option>boot</option><option>loafer</option><option>trail</option></select></div>
+   <div><label for="brand">Brand</label><select id="brand"><option value="">All brands</option></select></div>
+   <div><label for="gen">For</label><select id="gen"><option value="">Everyone</option><option>men</option><option>women</option><option>unisex</option></select></div>
+   <div><label for="mx">Up to <span id="mxl"></span></label><input id="mx" type="range" min="100000" max="1000000" step="25000" value="1000000"></div>
+   <div><label><input type="checkbox" id="stk"> In stock only</label></div></div>
+  <p class="mut" id="count"></p><div class="grid" id="grid"></div><p style="text-align:center"><button class="btn ghost" id="more" hidden>Load more</button></p></section>
+</main>
+<footer style="border-top:1px solid var(--line);padding:24px 5vw;text-align:center;font-size:.82rem;color:var(--mut);background:var(--card);margin-top:40px">
+  <p style="margin:0 0 6px"><b>Stride Lifestyle India Pvt Ltd</b> · Indiranagar, Bengaluru, Karnataka</p>
+  <p style="margin:0;color:var(--ink)">Demo store. Product photos are for illustration and sourced legally under the Unsplash Free License with photographer attribution.</p>
+</footer>
+<main id="login" hidden></main><main id="account" class="wrap" hidden></main><main id="admin" class="wrap" hidden></main>
+
+<aside class="drawer" id="drawer" aria-label="Cart">
+ <div class="row" style="justify-content:space-between;align-items:center"><h2 style="margin:0">Your cart</h2><button class="btn ghost" id="close" style="flex:0">Close</button></div>
+ <div id="lines"></div><div class="row" style="margin:12px 0"><input id="cp" placeholder="Coupon code" aria-label="Coupon code"><button class="btn ghost" id="cpb" style="flex:0">Apply</button></div>
+ <div id="sum"></div><button class="btn" id="tocheck" style="width:100%;margin-top:12px">Checkout</button>
+ <form id="co" hidden><h3>Delivery details (India)</h3>
+  <label class="fld">Full name<input id="cn" required></label>
+  <label class="fld">Mobile number (+91)<input id="cphone" type="tel" placeholder="10-digit mobile number" pattern="[0-9]{10}" required></label>
+  <label class="fld">Email<input id="ce" type="email" required></label>
+  <label class="fld">Flat, House no., Building, Street<input id="ca" required></label>
+  <div class="row">
+    <label class="fld">City<input id="ccity" required></label>
+    <label class="fld">State<input id="cstate" placeholder="e.g. Karnataka" required></label>
+  </div>
+  <label class="fld">PIN code (6 digits)<input id="cpin" pattern="[0-9]{6}" placeholder="e.g. 560038" required></label>
+  <div id="cpinEst" style="font-size:.82rem;margin:-6px 0 8px;font-weight:600" hidden></div>
+  <div class="panel" style="margin:10px 0;font-size:.85rem">
+    <b>Payment Method:</b> Pay on Delivery / Cash on Delivery (COD)<br>
+    <span class="mut">Pay via UPI QR, debit/credit card, or cash at doorstep upon arrival.</span>
+  </div>
+  <p class="mut" style="font-size:.8rem">All prices inclusive of 18% GST.</p>
+  <button class="btn" id="pay" style="width:100%">Place order</button>
+ </form>
+</aside>
+
+<dialog id="lightbox" class="lightbox-modal">
+  <div style="display:flex;justify-content:flex-end;margin-bottom:6px">
+    <button class="btn ghost sm" id="lightboxClose">✕ Close</button>
+  </div>
+  <img id="lightboxImg" class="lightbox-img" alt="Zoomed shoe image">
+</dialog>
+<dialog id="rv"></dialog>
+<dialog id="szGuideDialog" style="max-width:520px;border-radius:14px;border:1px solid var(--line);padding:24px;background:var(--card);color:var(--ink)">
+  <h2 style="margin-top:0">Footwear Size Guide</h2>
+  <p class="mut" style="font-size:.88rem">India standard shoe sizing follows <b>UK sizing</b>. Foot length in centimeters (cm) is provided below:</p>
+  <div class="tbl" style="margin:14px 0"><table>
+    <tr><th>UK / India</th><th>US Men</th><th>EU</th><th>Foot Length (cm)</th></tr>
+    <tr><td><b>UK 5</b></td><td>6</td><td>38</td><td>23.7 cm</td></tr>
+    <tr><td><b>UK 5.5</b></td><td>6.5</td><td>38.5</td><td>24.1 cm</td></tr>
+    <tr><td><b>UK 6</b></td><td>7</td><td>39</td><td>24.5 cm</td></tr>
+    <tr><td><b>UK 6.5</b></td><td>7.5</td><td>40</td><td>25.0 cm</td></tr>
+    <tr><td><b>UK 7</b></td><td>8</td><td>40.5</td><td>25.4 cm</td></tr>
+    <tr><td><b>UK 7.5</b></td><td>8.5</td><td>41</td><td>25.8 cm</td></tr>
+    <tr><td><b>UK 8</b></td><td>9</td><td>42</td><td>26.2 cm</td></tr>
+    <tr><td><b>UK 8.5</b></td><td>9.5</td><td>42.5</td><td>26.7 cm</td></tr>
+    <tr><td><b>UK 9</b></td><td>10</td><td>43</td><td>27.1 cm</td></tr>
+    <tr><td><b>UK 9.5</b></td><td>10.5</td><td>44</td><td>27.5 cm</td></tr>
+    <tr><td><b>UK 10</b></td><td>11</td><td>44.5</td><td>27.9 cm</td></tr>
+    <tr><td><b>UK 10.5</b></td><td>11.5</td><td>45</td><td>28.3 cm</td></tr>
+    <tr><td><b>UK 11</b></td><td>12</td><td>46</td><td>28.8 cm</td></tr>
+  </table></div>
+  <div class="panel" style="font-size:.84rem;margin:12px 0">
+    <b>💡 How to measure:</b> Place a sheet of paper on the floor against a wall. Stand upright with your heel touching the wall. Mark your longest toe with a pencil and measure from the wall to the mark in centimeters.
+  </div>
+  <button class="btn" id="szGuideClose" style="width:100%">Got it</button>
+</dialog><div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const $=id=>document.getElementById(id),
+formatINR=paise=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(Math.round((paise||0)/100)),
+formatCompactINR=paise=>{const rs=Math.round((paise||0)/100);if(rs>=1e7)return '₹'+(rs/1e7).toFixed(1).replace(/\.0$/,'')+'Cr';if(rs>=1e5)return '₹'+(rs/1e5).toFixed(1).replace(/\.0$/,'')+'L';if(rs>=1e3)return '₹'+(rs/1e3).toFixed(1).replace(/\.0$/,'')+'K';return formatINR(paise);},
+money=formatINR,esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ls={get(k,d){try{const v=localStorage.getItem('stride_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('stride_'+k,JSON.stringify(v))}catch(e){}},del(k){try{localStorage.removeItem('stride_'+k)}catch(e){}}};
+const S={user:null,token:ls.get('token',''),cart:ls.get('cart',[]),sel:null,size:null,coupon:null,next:null,mode:'login',tab:'orders',atab:'overview',wish:new Set()},C={};
+const F={page:1,items:[],total:0,pages:1};
+async function api(p,o={}){const r=await fetch('/api'+p,{...o,headers:{'Content-Type':'application/json',...(S.token?{Authorization:'Bearer '+S.token}:{})},body:o.body?JSON.stringify(o.body):undefined});let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw new Error(d.error||'Something went wrong. Try again.');return d}
+function toast(t){const e=$('toast');e.textContent=t;e.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,3000)}
+const date=d=>new Date(d).toLocaleDateString('en',{day:'numeric',month:'short',year:'numeric'}),oid=o=>'#'+o.id.slice(-6).toUpperCase();
+const eff=p=>p.salePrice||p.price,stars=(r,n)=>{const k=Math.round(r||0);return`<span title="${(r||0).toFixed(1)} out of 5">${'★'.repeat(k)}${'☆'.repeat(5-k)}</span> <span class="mut">${n?(r||0).toFixed(1)+' ('+n+')':'No reviews yet'}</span>`};
+const priceHtml=p=>{const hasDisc=p.mrp&&p.mrp>p.price;const pct=hasDisc?Math.round(((p.mrp-p.price)/p.mrp)*100):0;return`<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><b>${formatINR(p.price)}</b>${hasDisc?`<s>${formatINR(p.mrp)}</s><span class="tag" style="background:#16a34a;color:#fff;white-space:nowrap;display:inline-flex">${pct}% off</span>`:''}</div>`;};
+const remember=ps=>ps.forEach(p=>C[p.id]=p);
+
+// ---------- theme
+const dark=()=>document.documentElement.dataset.theme?document.documentElement.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+if(ls.get('theme'))document.documentElement.dataset.theme=ls.get('theme');
+$('theme').onclick=()=>{const t=dark()?'light':'dark';document.documentElement.dataset.theme=t;ls.set('theme',t)};
+
+// ---------- Catalog
+const qs=()=>{const p=new URLSearchParams({page:F.page,limit:12,sort:$('sort').value,max:$('mx').value});[['search','q'],['type','cat'],['brand','brand'],['gender','gen']].forEach(([k,id])=>{const v=$(id).value.trim();if(v)p.set(k,v)});if($('stk').checked)p.set('stock','1');return p};
+async function loadList(reset=true){if(reset)F.page=1;try{const d=await api('/products?'+qs());remember(d.items);F.items=reset?d.items:F.items.concat(d.items);F.total=d.total;F.pages=d.pages}catch(e){toast('Can’t reach the store server. Start it with npm start.')}renderGrid()}
+function renderGrid(){$('count').textContent=F.total+(F.total===1?' shoe':' shoes');
+ $('grid').innerHTML=F.items.map(p=>`<div class="cardw"><button class="card ${S.sel&&S.sel.id===p.id?'sel':''}" data-id="${p.id}"><div class="sw">${renderCardMedia(p)}</div><b>${esc(p.name)}</b>${p.salePrice?'<span class="tag">Sale</span>':''}<div class="badge">${esc(p.brand)}</div><div>${priceHtml(p)}</div><div class="badge">${p.stock>0?(p.stock<8?'Only '+p.stock+' left':'In stock'):'Sold out'}</div></button><button class="heart" data-h="${p.id}" aria-label="${S.wish.has(p.id)?'Remove from':'Add to'} wishlist: ${esc(p.name)}">${S.wish.has(p.id)?'♥':'♡'}</button></div>`).join('')||'<p class="mut">No shoes match those filters. Clear a filter to see more.</p>';
+ $('more').hidden=F.page>=F.pages}
+function renderCardMedia(p) {
+  const imgs = p.images && p.images.length ? p.images : (p.image ? [{ cardUrl: p.image, url: p.image }] : []);
+  if (!imgs.length) return '<span style="font-size:2rem">👟</span>';
+  const primary = imgs[0].cardUrl || imgs[0].url || p.image;
+  const secondary = (imgs.length > 1 ? (imgs[1].cardUrl || imgs[1].url) : primary);
+  return `
+    <img src="${esc(primary)}" alt="${esc(p.name)}" class="card-img-primary" loading="lazy">
+    <img src="${esc(secondary)}" alt="${esc(p.name)}" class="card-img-secondary" loading="lazy">
+  `;
+}
+
+let activeImgIdx = 0;
+function setMainGalleryImage(idx) {
+  if (!S.sel) return;
+  activeImgIdx = idx;
+  const imgs = S.sel.images && S.sel.images.length ? S.sel.images : (S.sel.image ? [{ url: S.sel.image, alt: S.sel.name }] : []);
+  const cur = imgs[idx] || imgs[0];
+  if (cur) {
+    $('mainImageWrap').innerHTML = `<img src="${esc(cur.url)}" alt="${esc(cur.alt || S.sel.name)}" class="product-hero-img" id="heroImg">`;
+    $('photoCredit').textContent = cur.credit ? `📷 Photo by ${cur.credit}` : '';
+  }
+  document.querySelectorAll('.thumb-btn').forEach((b, i) => b.classList.toggle('on', i === idx));
+}
+
+async function select(id){
+  let p=C[id];
+  if(!p || p.stock === undefined){
+    try{
+      p = await api('/products/' + id);
+      if(p) C[p.id] = p;
+    }catch(e){}
+  }
+  if(!p) return;
+  S.sel=p;
+  activeImgIdx = 0;
+  const imgs = p.images && p.images.length ? p.images : (p.image ? [{ url: p.image, thumbUrl: p.image, alt: p.name, credit: 'Stride Studio' }] : []);
+
+  if(imgs.length > 0) {
+    setMainGalleryImage(0);
+    $('thumbStrip').hidden = imgs.length <= 1;
+    $('thumbStrip').innerHTML = imgs.map((im, i) => `
+      <button type="button" class="thumb-btn ${i===0?'on':''}" onclick="setMainGalleryImage(${i})" aria-label="View photo ${i+1}">
+        <img src="${esc(im.thumbUrl || im.url)}" alt="Thumbnail ${i+1}">
+      </button>
+    `).join('');
+  } else {
+    $('mainImageWrap').innerHTML=`<div id="imgPlaceholder" class="img-placeholder"><span id="imgPlaceholderInitial" style="font-size:3.5rem;font-weight:800;color:var(--mut)">👟</span><span id="imgPlaceholderText" class="mut" style="font-size:.9rem;margin-top:6px">${esc(p.brand)} · ${esc(p.type)}</span></div>`;
+    $('thumbStrip').hidden = true;
+    $('photoCredit').textContent = '';
+  }
+
+  if (p.colorways && p.colorways.length) {
+    $('colorwaysBox').hidden = false;
+    $('colorSwatches').innerHTML = p.colorways.map((cw, i) => `
+      <button type="button" class="swatch ${i===0?'on':''}" style="background:${cw.hex}" title="${esc(cw.name)}" onclick="selectColorway(${i})" aria-label="${esc(cw.name)}"></button>
+    `).join('');
+  } else {
+    $('colorwaysBox').hidden = true;
+  }
+
+  if (p.highlights) {
+    $('highlightsBox').hidden = false;
+    $('highlightsBox').innerHTML = `
+      <div class="hl-item"><b>Upper</b><span>${esc(p.highlights.upperMaterial || 'Mesh')}</span></div>
+      <div class="hl-item"><b>Sole</b><span>${esc(p.highlights.soleMaterial || 'EVA Rubber')}</span></div>
+      <div class="hl-item"><b>Closure</b><span>${esc(p.highlights.closure || 'Lace-Up')}</span></div>
+      <div class="hl-item"><b>Fit</b><span>${esc(p.highlights.fit || 'Regular UK')}</span></div>
+    `;
+  } else {
+    $('highlightsBox').hidden = true;
+  }
+
+  $('pb').textContent=p.brand+' · '+p.type+' · '+p.gender;$('pn').textContent=p.name;$('pr').innerHTML=stars(p.rating,p.ratingCount);$('pd').textContent=p.desc||'';
+  $('pp').innerHTML=priceHtml(p)+'<div style="font-size:.82rem;color:var(--mut);margin-top:2px">Inclusive of all taxes</div>'+(p.stock<1?' – <span style="color:var(--bad)">sold out</span>':'');$('add').disabled=p.stock<1;S.size=null;renderSizes();paintWish();renderGrid();
+  // Load reviews inline
+  renderReviewsPanel(p.id);
+}
+
+function selectColorway(idx) {
+  if (!S.sel || !S.sel.colorways) return;
+  document.querySelectorAll('.swatch').forEach((s, i) => s.classList.toggle('on', i === idx));
+  const cw = S.sel.colorways[idx];
+  if (cw && typeof cw.imageIndex === 'number') {
+    setMainGalleryImage(cw.imageIndex);
+  }
+}
+function renderSizes(){
+  const list = (S.sel && S.sel.sizes && S.sel.sizes.length) ? S.sel.sizes : [5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10,10.5,11];
+  $('sizes').innerHTML = list.map(n=>`<button class="sz ${S.size===n?'on':''}" data-z="${n}" aria-pressed="${S.size===n}">UK ${n}</button>`).join('');
+}
+// Size Guide dialog handlers
+if($('szGuideBtn')) $('szGuideBtn').onclick = () => $('szGuideDialog').showModal();
+if($('szGuideClose')) $('szGuideClose').onclick = () => $('szGuideDialog').close();
+
+// Product page PIN checker
+if($('pdpPinBtn')) {
+  $('pdpPinBtn').onclick = async () => {
+    const pin = $('pdpPin').value.trim();
+    const resEl = $('pdpPinRes');
+    if(!/^[1-9][0-9]{5}$/.test(pin)) {
+      resEl.textContent = '❌ Please enter a valid 6-digit Indian PIN code';
+      resEl.style.color = 'var(--bad)';
+      resEl.hidden = false;
+      return;
+    }
+    try {
+      const data = await api('/pincode/' + pin);
+      const estDate = new Date(data.estimatedDate).toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric' });
+      resEl.innerHTML = `✅ Delivery to <b>${esc(data.city)}</b> (${pin}) by <b>${estDate}</b> (${data.deliveryDays} business days). Cash on Delivery available.`;
+      resEl.style.color = '#16a34a';
+      resEl.hidden = false;
+    } catch(err) {
+      resEl.textContent = '❌ ' + err.message;
+      resEl.style.color = 'var(--bad)';
+      resEl.hidden = false;
+    }
+  };
+}
+
+// Checkout PIN check on blur
+if($('cpin')) {
+  $('cpin').onblur = async () => {
+    const pin = $('cpin').value.trim();
+    const est = $('cpinEst');
+    if(!/^[1-9][0-9]{5}$/.test(pin)) return;
+    try {
+      const data = await api('/pincode/' + pin);
+      const estDate = new Date(data.estimatedDate).toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric' });
+      est.innerHTML = `🚚 Estimated delivery by <b>${estDate}</b> (${data.deliveryDays} days to ${esc(data.city)})`;
+      est.style.color = '#16a34a';
+      est.hidden = false;
+      if(data.city && !$('ccity').value) $('ccity').value = data.city;
+      if(data.state && !$('cstate').value) $('cstate').value = data.state;
+    } catch(e) {}
+  };
+}
+
+// Lightbox zoom handler
+if ($('productGallery')) {
+  $('productGallery').onclick = () => {
+    const hero = $('heroImg');
+    if (!hero) return;
+    $('lightboxImg').src = hero.src;
+    $('lightbox').showModal();
+  };
+}
+if ($('lightboxClose')) $('lightboxClose').onclick = () => $('lightbox').close();
+if ($('lightbox')) $('lightbox').onclick = e => { if (e.target.id === 'lightbox') $('lightbox').close(); };
+
+const paintWish=()=>{$('wish').textContent=S.sel&&S.wish.has(S.sel.id)?'♥ Saved':'♡ Save'};
+$('sizes').onclick=e=>{const z=e.target.dataset.z;if(z){S.size=+z;renderSizes()}};
+$('grid').onclick=e=>{const h=e.target.closest('[data-h]');if(h)return toggleWish(h.dataset.h);const b=e.target.closest('.card');if(b)select(b.dataset.id)};
+$('more').onclick=()=>{F.page++;loadList(false)};
+
+// ---------- Autocomplete & Search
+let dt;
+(function setupAutocomplete(){
+  const inp = $('q'), box = $('acList');
+  if(!inp||!box) return;
+  let acTimer, acFocus = -1, acItems = [];
+
+  function closeAc(){box.classList.remove('open');inp.setAttribute('aria-expanded','false');acFocus=-1;}
+  function openAc(){box.classList.add('open');inp.setAttribute('aria-expanded','true');}
+
+  function renderAc(hits){
+    acItems = hits;
+    if(!hits.length){closeAc();return;}
+    box.innerHTML = hits.map((h,i)=>{
+      const thumb = h.thumb ? `<img class="ac-thumb" src="${esc(h.thumb)}" alt="${esc(h.name)}" loading="lazy">` : `<div class="ac-thumb-ph">👟</div>`;
+      const hasDisc = h.mrp && h.mrp > h.price;
+      const pct = hasDisc ? Math.round((h.mrp-h.price)/h.mrp*100) : 0;
+      const priceStr = formatINR(h.price) + (hasDisc ? ` <span style="color:#16a34a;font-size:.74rem;font-weight:700">${pct}% off</span>` : '');
+      return `<div class="ac-item" role="option" data-idx="${i}" data-id="${esc(h.id)}" tabindex="-1">${thumb}<div class="ac-meta"><div class="ac-name">${esc(h.name)}</div><div class="ac-sub">${esc(h.brand)} · ${esc(h.type)}</div></div><div class="ac-price">${priceStr}</div></div>`;
+    }).join('') + `<div class="ac-footer" id="acSeeAll">See all results for "${esc(inp.value)}" →</div>`;
+    openAc();
+    box.querySelectorAll('.ac-item').forEach(el=>{
+      el.onclick = () => {
+        const id = el.dataset.id;
+        closeAc();
+        select(id);
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      };
+    });
+    const seeAll = $('acSeeAll');
+    if(seeAll) seeAll.onclick = () => { closeAc(); loadList(); };
+  }
+
+  inp.addEventListener('input', () => {
+    // 1. Grid filter debounce (300ms)
+    clearTimeout(dt);
+    dt = setTimeout(loadList, 300);
+
+    // 2. Autocomplete suggestions debounce (160ms)
+    clearTimeout(acTimer);
+    const v = inp.value.trim();
+    if(v.length < 1){ closeAc(); return; }
+    acTimer = setTimeout(async()=>{
+      try{
+        const hits = await api('/products/autocomplete?q='+encodeURIComponent(v));
+        hits.forEach(h=>C[h.id]=h);
+        renderAc(hits);
+      }catch(e){ closeAc(); }
+    }, 160);
+  });
+
+  inp.addEventListener('keydown', e => {
+    const items = box.querySelectorAll('.ac-item');
+    if(e.key==='ArrowDown'){
+      e.preventDefault();
+      acFocus = Math.min(acFocus + 1, items.length - 1);
+      if(acFocus >= 0) items[acFocus]?.focus();
+    } else if(e.key==='ArrowUp'){
+      e.preventDefault();
+      acFocus = Math.max(acFocus - 1, 0);
+      if(acFocus >= 0) items[acFocus]?.focus(); else inp.focus();
+    } else if(e.key==='Escape'){
+      closeAc();
+    } else if(e.key==='Enter'){
+      if(acFocus >= 0 && items[acFocus]){
+        e.preventDefault();
+        items[acFocus]?.click();
+      } else {
+        closeAc();
+        loadList();
+      }
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if(!inp.contains(e.target) && !box.contains(e.target)) closeAc();
+  });
+})();
+['sort','cat','brand','gen','stk'].forEach(i=>$(i).onchange=()=>loadList());
+$('mx').oninput=()=>{$('mxl').textContent=money($('mx').value);clearTimeout(dt);dt=setTimeout(loadList,250)};
+async function toggleWish(id){if(!S.user){S.next='/';toast('Sign in to save shoes to your wishlist');return go('/login')}
+ try{const d=await api('/wishlist/'+id,{method:'POST'});S.wish=new Set(d.wishlist);S.user.wishlist=d.wishlist;paintWish();renderGrid();if(!$('account').hidden)renderAccount()}catch(e){toast(e.message)}}
+$('wish').onclick=()=>S.sel&&toggleWish(S.sel.id);
+
+// ---------- Reviews (inline panel – loaded automatically when a product is selected)
+let _revPickStar = 5;
+
+async function renderReviewsPanel(pid) {
+  const panel = $('reviewsPanel');
+  if (!panel) return;
+  panel.hidden = false;
+  panel.innerHTML = '<div class="rev-panel"><p class="mut" style="font-size:.85rem">Loading reviews…</p></div>';
+
+  try {
+    const reviews = await api('/products/' + pid + '/reviews');
+    const p = C[pid] || S.sel || {};
+    const total = reviews.length;
+    const avg = total > 0 ? (reviews.reduce((s, r) => s + (r.rating || 0), 0) / total) : (p.rating || 0);
+
+    // Distribution / histogram for 5 down to 1
+    const counts = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+    reviews.forEach(r => {
+      const k = Math.min(5, Math.max(1, Math.round(r.rating || 0)));
+      counts[k] = (counts[k] || 0) + 1;
+    });
+
+    const histRows = [5, 4, 3, 2, 1].map(starsCount => {
+      const c = counts[starsCount] || 0;
+      const pct = total > 0 ? Math.round((c / total) * 100) : 0;
+      return `<div class="rev-bar-row">
+        <span style="min-width:24px;font-weight:600">${starsCount}★</span>
+        <div class="rev-bar-bg"><div class="rev-bar-fill" style="width:${pct}%"></div></div>
+        <span class="mut" style="min-width:32px;text-align:right">${c}</span>
+      </div>`;
+    }).join('');
+
+    const reviewsListHtml = reviews.length > 0
+      ? `<div class="rev-list">` + reviews.map(r => {
+          const dateStr = r.createdAt ? new Date(r.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+          const starStr = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+          return `<div class="rev-card">
+            <div class="rev-meta">
+              <span class="rev-name">${esc(r.userName || 'Stride Customer')}</span>
+              <span class="rev-verified">✔ Verified Buyer</span>
+              <span class="rev-stars-row" title="${r.rating} of 5 stars">${starStr}</span>
+              <span class="rev-date">${esc(dateStr)}</span>
+            </div>
+            <div class="rev-body">${esc(r.body || 'No comment written.')}</div>
+          </div>`;
+        }).join('') + `</div>`
+      : `<p class="mut" style="font-size:.88rem;margin:12px 0 16px">No reviews yet for this shoe. Be the first to share your experience!</p>`;
+
+    const writeFormHtml = S.user ? `
+      <form id="revForm" class="rev-write">
+        <h4 style="margin:0 0 4px">Write a Review</h4>
+        <p class="mut" style="font-size:.82rem;margin:0 0 8px">Reviewing as <b>${esc(S.user.name)}</b></p>
+        <div style="font-size:.82rem;font-weight:600">Your Rating: <span id="revStarLabel">${_revPickStar} Stars</span></div>
+        <div class="star-pick" id="revStarPick" role="radiogroup" aria-label="Select rating">
+          ${[1, 2, 3, 4, 5].map(n => `<button type="button" class="${n <= _revPickStar ? 'on' : ''}" data-val="${n}" aria-label="${n} star">${n <= _revPickStar ? '★' : '☆'}</button>`).join('')}
+        </div>
+        <textarea id="revBody" placeholder="How does it fit? Comfort, materials, traction… (optional)" rows="3" maxlength="600" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-family:inherit;font-size:.88rem;background:var(--bg);color:var(--ink);box-sizing:border-box"></textarea>
+        <div style="margin-top:10px;display:flex;justify-content:flex-end">
+          <button type="submit" class="btn sm" id="revSubmitBtn">Submit Review</button>
+        </div>
+      </form>
+    ` : `
+      <div class="rev-write" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>
+          <h4 style="margin:0 0 4px">Have you worn this pair?</h4>
+          <p class="mut" style="font-size:.82rem;margin:0">Sign in to leave a verified rating and review.</p>
+        </div>
+        <button type="button" class="btn ghost sm" id="revSignInBtn">Sign in to Review</button>
+      </div>
+    `;
+
+    panel.innerHTML = `
+      <div class="rev-panel">
+        <div class="rev-panel-header">
+          <h3 style="margin:0">Customer Reviews</h3>
+          <span class="mut" style="font-size:.85rem">${total} ${total === 1 ? 'review' : 'reviews'}</span>
+        </div>
+        <div class="rev-summary" style="margin-bottom:16px">
+          <div style="text-align:center;min-width:90px">
+            <div class="rev-big-score">${avg ? avg.toFixed(1) : '—'}</div>
+            <div class="rev-stars-row" style="margin-top:2px">${stars(avg, 0).split(' ')[0]}</div>
+            <div class="mut" style="font-size:.76rem;margin-top:2px">${total > 0 ? avg.toFixed(1) + ' out of 5' : 'Unrated'}</div>
+          </div>
+          <div class="rev-hist">
+            ${histRows}
+          </div>
+        </div>
+        ${reviewsListHtml}
+        ${writeFormHtml}
+      </div>
+    `;
+
+    // Hook up star picker interactive hover/click
+    const starWrap = $('revStarPick');
+    if (starWrap) {
+      const updateStarButtons = (val) => {
+        starWrap.querySelectorAll('button').forEach(btn => {
+          const v = +btn.dataset.val;
+          btn.classList.toggle('on', v <= val);
+          btn.textContent = v <= val ? '★' : '☆';
+        });
+        const lbl = $('revStarLabel');
+        if (lbl) lbl.textContent = val + (val === 1 ? ' Star' : ' Stars');
+      };
+
+      starWrap.querySelectorAll('button').forEach(btn => {
+        btn.onclick = () => {
+          _revPickStar = +btn.dataset.val;
+          updateStarButtons(_revPickStar);
+        };
+        btn.onmouseenter = () => updateStarButtons(+btn.dataset.val);
+        btn.onmouseleave = () => updateStarButtons(_revPickStar);
+      });
+    }
+
+    // Hook up form submit
+    const revForm = $('revForm');
+    if (revForm) {
+      revForm.onsubmit = async (e) => {
+        e.preventDefault();
+        const submitBtn = $('revSubmitBtn');
+        if (submitBtn) submitBtn.disabled = true;
+        try {
+          const bodyVal = ($('revBody')?.value || '').trim();
+          await api('/products/' + pid + '/reviews', {
+            method: 'POST',
+            body: { rating: _revPickStar, body: bodyVal }
+          });
+          toast('Thank you! Your review has been posted.');
+          // Refresh product
+          try {
+            const up = await api('/products/' + pid);
+            if (up && up.id) {
+              C[up.id] = up;
+              if (S.sel && S.sel.id === up.id) {
+                S.sel = up;
+                $('pr').innerHTML = stars(up.rating, up.ratingCount);
+              }
+            }
+          } catch (_) {}
+          // Re-render reviews
+          renderReviewsPanel(pid);
+        } catch (err) {
+          toast(err.message || 'Could not post review');
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      };
+    }
+
+    // Hook up sign in button
+    const revSignInBtn = $('revSignInBtn');
+    if (revSignInBtn) {
+      revSignInBtn.onclick = () => {
+        S.next = '/';
+        go('/login');
+      };
+    }
+
+  } catch (err) {
+    panel.innerHTML = `<div class="rev-panel"><p class="mut" style="color:var(--bad);font-size:.85rem">Could not load reviews: ${esc(err.message)}</p></div>`;
+  }
+}
+
+function renderReviews(id) { renderReviewsPanel(id); }
+
+
+// ---------- Cart + checkout
+const calc=()=>{const sub=S.cart.reduce((s,l)=>s+l.price*l.qty,0);let disc=0,freeShip=false;if(S.coupon){if(S.coupon.type==='shipping'){freeShip=true;}else if(S.coupon.type==='flat'){disc=Math.min(S.coupon.amount||0,sub);}else{disc=Math.round(sub*(S.coupon.percent||0)/100);if(S.coupon.maxDiscount&&S.coupon.maxDiscount>0)disc=Math.min(disc,S.coupon.maxDiscount);}}const ship=(sub&&sub-disc>=149900||freeShip)?0:(sub?9900:0);return{sub,disc,ship,total:Math.max(0,sub-disc+ship)}};
+function drawCart(){ls.set('cart',S.cart);$('cc').textContent=S.cart.reduce((s,l)=>s+l.qty,0);
+ $('lines').innerHTML=S.cart.map(l=>`<div class="line"><span>${esc(l.name)}, size UK ${l.size} × ${l.qty}</span><span>${money(l.price*l.qty)} <button class="btn ghost sm" data-rm="${l.id}|${l.size}" aria-label="Remove ${esc(l.name)} size UK ${l.size}">Remove</button></span></div>`).join('')||'<p class="mut">Your cart is empty. Pick a shoe and a size to add it.</p>';
+ const c=calc(),has=S.cart.length>0;$('sum').innerHTML=has?`<div class="line"><span>Subtotal</span><span>${money(c.sub)}</span></div>${c.disc?`<div class="line"><span>Coupon ${esc(S.coupon.code)}</span><span>-${money(c.disc)}</span></div>`:''}<div class="line"><span>Shipping${c.ship?' (free over ₹1,499)':''}</span><span>${c.ship?money(c.ship):'Free'}</span></div><div class="line"><b>Total</b><b>${money(c.total)}</b></div><div style="font-size:.8rem;color:var(--mut);margin-top:4px">Inclusive of 18% GST</div>`:'';
+ $('tocheck').hidden=!has||!$('co').hidden;if(!has)$('co').hidden=true}
+$('add').onclick=()=>{const p=S.sel;if(!S.size)return toast('Choose a size first');const l=S.cart.find(x=>x.id===p.id&&x.size===S.size),n=S.cart.filter(x=>x.id===p.id).reduce((s,x)=>s+x.qty,0);
+ if(n>=p.stock)return toast('Only '+p.stock+' pairs available');l?l.qty++:S.cart.push({id:p.id,size:S.size,qty:1,name:p.name,price:eff(p)});drawCart();toast('Added '+p.name+', size UK '+S.size)};
+$('lines').onclick=e=>{const id=e.target.dataset.rm;if(id){S.cart=S.cart.filter(l=>l.id+'|'+l.size!==id);drawCart()}};
+$('cartBtn').onclick=()=>$('drawer').classList.add('open');$('close').onclick=()=>$('drawer').classList.remove('open');
+$('cpb').onclick=async()=>{try{S.coupon=await api('/coupons/'+encodeURIComponent($('cp').value.trim())+'?subtotal='+calc().sub);const lbl=S.coupon.type==='flat'?formatINR(S.coupon.amount)+' off':(S.coupon.type==='shipping'?'Free delivery':S.coupon.percent+'% off'+(S.coupon.maxDiscount?' (max '+formatINR(S.coupon.maxDiscount)+')':''));toast('Coupon applied: '+lbl)}catch(e){S.coupon=null;toast(e.message)}drawCart()};
+$('tocheck').onclick=()=>{
+ $('co').hidden=false;$('tocheck').hidden=true;
+ if(S.user){
+   $('cn').value=S.user.name;$('ce').value=S.user.email;
+   const defAddr = (S.user.addresses||[]).find(a=>a.isDefault) || (S.user.addresses||[])[0];
+   if(defAddr){
+     $('ca').value = defAddr.line1 + (defAddr.line2 ? ', ' + defAddr.line2 : '');
+     if($('cphone')) $('cphone').value = defAddr.phone || S.user.phone || '';
+     if($('ccity')) $('ccity').value = defAddr.city || '';
+     if($('cstate')) $('cstate').value = defAddr.state || '';
+     if($('cpin')) $('cpin').value = defAddr.postalCode || '';
+   } else {
+     $('ca').value = S.user.address || '';
+     if($('cphone')) $('cphone').value = S.user.phone || '';
+   }
+ }
+};
+$('co').onsubmit=async e=>{e.preventDefault();$('pay').disabled=true;
+ try{
+  const addrLine1 = $('ca').value.trim();
+  const addrCity = $('ccity')?.value.trim() || '';
+  const addrState = $('cstate')?.value.trim() || '';
+  const addrPin = $('cpin')?.value.trim() || '';
+  const phone = $('cphone')?.value.trim() || '';
+  const fullAddr = [addrLine1, addrCity, addrState, addrPin].filter(Boolean).join(', ');
+  const o=await api('/orders',{method:'POST',body:{
+    name: $('cn').value,
+    email: $('ce').value,
+    phone,
+    address: fullAddr,
+    addrLine1,
+    addrCity,
+    addrState,
+    addrPin,
+    coupon: S.coupon && S.coupon.code,
+    lines: S.cart.map(({id,size,qty})=>({id,size,qty}))
+  }});
+  S.cart=[];S.coupon=null;$('co').reset();$('co').hidden=true;$('drawer').classList.remove('open');drawCart();toast('Order '+oid(o)+' placed. Total '+money(o.total)+', paid on delivery.');loadList()}
+ catch(err){toast(err.message)}$('pay').disabled=false};
+
+// ---------- User menu, notifications & nav
+function getInitials(name){return (name||'U').split(' ').map(n=>n[0]).slice(0,2).join('').toUpperCase()}
+function paintNav(){
+  const signed = !!S.user;
+  $('navSignIn').hidden = signed;
+  $('userMenuWrap').hidden = !signed;
+  $('notifBell').hidden = !signed;
+  if(signed){
+    $('hdrUserName').textContent = S.user.name.split(' ')[0];
+    if(S.user.avatar){
+      $('hdrAvatar').innerHTML = `<img src="${esc(S.user.avatar)}" alt="${esc(S.user.name)}">`;
+    } else {
+      $('hdrAvatar').textContent = getInitials(S.user.name);
+    }
+    $('menuAdminLink').hidden = !(S.user.role === 'admin');
+    fetchNotifications();
+  }
+  S.wish = new Set(S.user ? S.user.wishlist : []);
+}
+
+$('userMenuToggle').onclick = e => {
+  e.stopPropagation();
+  const d = $('userMenuDropdown');
+  const open = !d.hidden;
+  d.hidden = open;
+  $('userMenuToggle').setAttribute('aria-expanded', String(!open));
+};
+document.addEventListener('click', e => {
+  if (!$('userMenuWrap').contains(e.target)) $('userMenuDropdown').hidden = true;
+});
+$('menuSignOut').onclick = () => {
+  S.token = ''; S.user = null; ls.del('token'); paintNav(); go('/'); loadList(); toast('Signed out successfully');
+};
+
+async function fetchNotifications(){
+  if(!S.user) return;
+  try{
+    const d = await api('/notifications');
+    const badge = $('notifBadge');
+    if(d.unreadCount > 0){
+      badge.textContent = d.unreadCount;
+      badge.hidden = false;
+    } else {
+      badge.hidden = true;
+    }
+  }catch(e){}
+}
+$('notifBell').onclick = () => go('/account/notifications');
+
+function setUser(d){S.token=d.token;ls.set('token',d.token);S.user=d.user;paintNav();toast('Welcome, '+d.user.name);const n=S.next||(d.user.role==='admin'?'/admin':'/account');S.next=null;go(n);loadList()}
+const strength=p=>{let s=0;if(p.length>=8)s++;if(/[A-Z]/.test(p)&&/[a-z]/.test(p))s++;if(/\d/.test(p))s++;if(/[^A-Za-z0-9]/.test(p))s++;return['Too weak','Weak','Okay','Strong','Very strong'][s]};
+function renderLogin(){if(S.user)return go('/account');const m=S.mode,L=$('login'),R2=m==='register',titles={login:'Welcome back',register:'Create your account',forgot:'Reset your password',reset:'Choose a new password'};
+ L.innerHTML=`<div class="auth"><div class="aside"><h1>Stride</h1><p style="font-size:1.2rem;margin:0">Shoes for every day, in every size.</p><ul><li>Save favourites to your wishlist</li><li>Track and cancel your orders</li><li>Check out faster with saved details</li><li>Manage security, 2FA and addresses</li></ul></div>
+ <div class="box"><h2 style="margin:0 0 12px;font-size:1.8rem">${titles[m]}</h2>
+ ${m==='login'||m==='register'?`<div class="tabs" style="margin-top:0"><button type="button" data-m="login" class="${m==='login'?'on':''}">Sign in</button><button type="button" data-m="register" class="${R2?'on':''}">Create account</button></div>`:''}
+ <form id="af" novalidate>
+ ${R2?'<label class="fld">Full name<input id="an" autocomplete="name"></label>':''}
+ ${m!=='reset'?'<label class="fld">Email<input id="ae" type="email" autocomplete="email"></label>':''}
+ ${m==='reset'?'<label class="fld">Reset code<input id="tk" autocomplete="one-time-code"></label>':''}
+ ${m!=='forgot'?`<label class="fld">${m==='reset'?'New password':'Password'}<input id="ap" type="password" autocomplete="${m==='login'?'current-password':'new-password'}"></label>`:''}
+ ${R2||m==='reset'?'<div class="mut" id="st" style="margin:-6px 0 10px;font-size:.85rem"></div><label class="fld">Confirm password<input id="ap2" type="password" autocomplete="new-password"></label>':''}
+ ${m==='login'||R2||m==='reset'?'<label class="fld"><input type="checkbox" id="sp"> Show password</label>':''}
+ <div class="err" id="aerr" role="alert"></div>
+ <button class="btn" id="sub" style="width:100%">${{login:'Sign in',register:'Create account',forgot:'Send reset code',reset:'Save new password'}[m]}</button></form>
+ <p class="mut" style="margin-top:14px">${m==='login'?'<a href="#/login" id="fg">Forgot your password?</a>':m==='forgot'||m==='reset'?'<a href="#/login" id="bk">Back to sign in</a>':'By creating an account you agree to receive order updates.'}</p>
+ ${m==='login'?'<p class="mut" style="font-size:.85rem">Demo admin: admin@stride.dev / admin123 | Customer: asha@example.com / customer123</p>':''}</div></div>`;
+ L.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;renderLogin()});
+ if($('fg'))$('fg').onclick=e=>{e.preventDefault();S.mode='forgot';renderLogin()};if($('bk'))$('bk').onclick=e=>{e.preventDefault();S.mode='login';renderLogin()};
+ if($('sp'))$('sp').onchange=e=>['ap','ap2'].forEach(i=>{if($(i))$(i).type=e.target.checked?'text':'password'});
+ if($('st'))$('ap').oninput=()=>$('st').textContent=$('ap').value?'Password strength: '+strength($('ap').value):'';
+ $('af').onsubmit=async e=>{e.preventDefault();const v=i=>$(i)?$(i).value.trim():'',pw=$('ap')?$('ap').value:'',err=t=>$('aerr').textContent=t;err('');
+  if(m!=='reset'&&!/^\S+@\S+\.\S+$/.test(v('ae')))return err('Enter a valid email address.');
+  if(R2&&!v('an'))return err('Enter your name.');
+  if((R2||m==='reset')&&pw.length<6)return err('Use at least 6 characters for your password.');
+  if((R2||m==='reset')&&pw!==$('ap2').value)return err('The two passwords don’t match.');
+  if(m==='login'&&!pw)return err('Enter your password.');if(m==='reset'&&!v('tk'))return err('Enter the reset code.');
+  $('sub').disabled=true;
+  try{if(m==='login')setUser(await api('/auth/login',{method:'POST',body:{email:v('ae'),password:pw}}));
+   else if(R2)setUser(await api('/auth/register',{method:'POST',body:{name:v('an'),email:v('ae'),password:pw}}));
+   else if(m==='forgot'){const d=await api('/auth/forgot',{method:'POST',body:{email:v('ae')}});S.mode='reset';renderLogin();$('aerr').style.color='var(--mut)';$('aerr').textContent=d.devToken?'Dev mode: your reset code is '+d.devToken+' (it is also in the server console).':d.message;if(d.devToken)$('tk').value=d.devToken}
+   else{await api('/auth/reset',{method:'POST',body:{token:v('tk'),password:pw}});S.mode='login';renderLogin();toast('Password updated. Sign in with your new password.')}}
+  catch(x){err(x.message);if($('sub'))$('sub').disabled=false}}}
+
+// ---------- Account Center
+async function renderAccount(sub = 'overview'){
+  const a=$('account');if(!S.user)return go('/login');
+  const validSubs=['overview','orders','profile','addresses','security','settings','wishlist','notifications'];
+  const curSub = validSubs.includes(sub) ? sub : 'overview';
+
+  const menu = [
+    { id: 'overview', icon: '📊', label: 'Overview' },
+    { id: 'orders', icon: '📦', label: 'My orders' },
+    { id: 'wishlist', icon: '♥', label: 'Wishlist' },
+    { id: 'profile', icon: '👤', label: 'Profile' },
+    { id: 'addresses', icon: '📍', label: 'Addresses' },
+    { id: 'security', icon: '🔒', label: 'Security' },
+    { id: 'settings', icon: '⚙️', label: 'Settings' },
+    { id: 'notifications', icon: '🔔', label: 'Notifications' }
+  ];
+
+  a.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span class="avatar-circle avatar-lg">${S.user.avatar ? `<img src="${esc(S.user.avatar)}">` : getInitials(S.user.name)}</span>
+        <div>
+          <h1 class="h2" style="margin:0">${esc(S.user.name)}</h1>
+          <span class="mut">${esc(S.user.email)} · ${S.user.role === 'admin' ? 'Admin' : 'Customer'}</span>
+        </div>
+      </div>
+      <button class="btn ghost sm" id="accSignOutBtn">Sign out</button>
+    </div>
+
+    <!-- Mobile Scroll Tabs -->
+    <div class="acc-mob-tabs">
+      ${menu.map(m => `<button data-sub="${m.id}" class="${curSub===m.id?'on':''}">${m.icon} ${m.label}</button>`).join('')}
+    </div>
+
+    <!-- Layout: Desktop Sidebar + Content Panel -->
+    <div class="acc-layout">
+      <aside class="acc-nav">
+        ${menu.map(m => `<button data-sub="${m.id}" class="${curSub===m.id?'on':''}"><span>${m.icon} ${m.label}</span> <span>›</span></button>`).join('')}
+      </aside>
+      <section id="accContent" class="panel" style="min-height:480px"></section>
+    </div>
+  `;
+
+  a.querySelectorAll('[data-sub]').forEach(b => b.onclick = () => go('/account/' + b.dataset.sub));
+  $('accSignOutBtn').onclick = () => {
+    S.token=''; S.user=null; ls.del('token'); paintNav(); go('/'); loadList(); toast('Signed out');
+  };
+
+  const cnt = $('accContent');
+
+  // --- SUBPAGE 1: OVERVIEW
+  if(curSub === 'overview'){
+    cnt.innerHTML = `<p class="mut">Loading account overview...</p>`;
+    try {
+      const [orders, wishlist, addrs] = await Promise.all([
+        api('/orders/mine'),
+        api('/wishlist'),
+        api('/account/addresses')
+      ]);
+      const defAddr = addrs.find(x => x.isDefault) || addrs[0];
+      const latestOrder = orders[0];
+      const statusPct = { placed: 25, shipped: 65, delivered: 100, cancelled: 0 };
+
+      cnt.innerHTML = `
+        <h2 style="margin-top:0">Welcome back, ${esc(S.user.name)}</h2>
+        <p class="mut">Manage your orders, profile details, saved addresses and security settings.</p>
+
+        <div class="stats" style="margin:20px 0">
+          <div class="stat"><span class="mut">Total Orders</span><b>${orders.length}</b></div>
+          <div class="stat"><span class="mut">Wishlist Items</span><b>${wishlist.length}</b></div>
+          <div class="stat"><span class="mut">Saved Addresses</span><b>${addrs.length}</b></div>
+        </div>
+
+        ${latestOrder ? `
+          <div class="panel" style="margin-bottom:20px;border-color:var(--acc)">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+              <div>
+                <span class="badge" style="font-weight:700">LATEST ORDER</span>
+                <h3 style="margin:4px 0">${oid(latestOrder)} · ${money(latestOrder.total)}</h3>
+                <span class="mut">${date(latestOrder.createdAt)} · ${latestOrder.lines.length} item(s)</span>
+              </div>
+              <span class="pill" style="font-weight:700;text-transform:capitalize">${latestOrder.status}</span>
+            </div>
+            
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width:${statusPct[latestOrder.status]||20}%"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut)">
+              <span>Order Placed</span><span>Processing</span><span>Shipped</span><span>Delivered</span>
+            </div>
+            <div style="margin-top:14px;text-align:right">
+              <button class="btn ghost sm" onclick="go('/account/orders')">View All Orders</button>
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="two">
+          <div class="panel">
+            <h3 style="margin-top:0">Default Delivery Address</h3>
+            ${defAddr ? `
+              <b>${esc(defAddr.name)}</b> <span class="tag">${esc(defAddr.label)}</span>
+              <p style="margin:6px 0">${esc(defAddr.line1)}${defAddr.line2 ? ', '+esc(defAddr.line2) : ''}<br>
+              ${esc(defAddr.city)}, ${esc(defAddr.state)} ${esc(defAddr.postalCode)}<br>${esc(defAddr.country)}</p>
+              <span class="mut">Phone: ${esc(defAddr.phone || 'None provided')}</span><br><br>
+              <button class="btn ghost sm" onclick="go('/account/addresses')">Manage Addresses</button>
+            ` : `
+              <p class="mut">No default address saved yet.</p>
+              <button class="btn ghost sm" onclick="go('/account/addresses')">Add an Address</button>
+            `}
+          </div>
+
+          <div class="panel">
+            <h3 style="margin-top:0">Quick Actions</h3>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <button class="btn ghost" style="text-align:left" onclick="go('/account/profile')">👤 Edit Profile & Avatar</button>
+              <button class="btn ghost" style="text-align:left" onclick="go('/account/security')">🔒 Password & 2FA Security</button>
+              <button class="btn ghost" style="text-align:left" onclick="go('/account/settings')">⚙️ Preferences & Data Export</button>
+              <button class="btn ghost" style="text-align:left" onclick="go('/account/wishlist')">♥ View Saved Wishlist</button>
+            </div>
+          </div>
+        </div>
+      `;
+    } catch(err){
+      cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`;
+    }
+  }
+
+  // --- SUBPAGE 2: ORDERS (Phase 3: Delivery Timeline & GST Tax Invoice)
+  else if(curSub === 'orders'){
+    cnt.innerHTML = `<p class="mut">Loading orders...</p>`;
+    try {
+      const os = await api('/orders/mine');
+      const steps = [
+        { key: 'placed', label: 'Placed' },
+        { key: 'confirmed', label: 'Confirmed' },
+        { key: 'packed', label: 'Packed' },
+        { key: 'shipped', label: 'Shipped' },
+        { key: 'out_for_delivery', label: 'Out for Delivery' },
+        { key: 'delivered', label: 'Delivered' }
+      ];
+
+      const renderTimelineHtml = (order) => {
+        if (order.status === 'cancelled') {
+          return `<div style="padding:10px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;color:#b91c1c;font-size:.82rem;font-weight:600;margin:12px 0">
+            ❌ Order Cancelled (Refund/Restock completed)
+          </div>`;
+        }
+        const curIdx = steps.findIndex(s => s.key === order.status);
+        const activeIdx = curIdx === -1 ? 0 : curIdx;
+        const fillPct = (activeIdx / (steps.length - 1)) * 100;
+
+        return `
+          <div class="tl-wrap">
+            <div class="tl-track"></div>
+            <div class="tl-track-fill" style="width:${fillPct}%"></div>
+            ${steps.map((st, i) => {
+              const isDone = i <= activeIdx;
+              const isCurr = i === activeIdx;
+              const cls = isCurr ? 'curr' : (isDone ? 'done' : '');
+              return `
+                <div class="tl-step ${cls}">
+                  <div class="tl-dot">${isDone ? '✓' : (i + 1)}</div>
+                  <div class="tl-lbl">${st.label}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      };
+
+      cnt.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <h2 style="margin:0">My Orders (${os.length})</h2>
+          <span style="font-size:.84rem;color:var(--mut)">Track status & download GST tax invoices</span>
+        </div>
+        ${os.map(o => `
+          <div class="order-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
+              <div>
+                <b style="font-size:1.05rem">${oid(o)}</b>
+                <span class="mut" style="font-size:.84rem;margin-left:8px">${date(o.createdAt)}</span>
+                <span class="pill" style="margin-left:8px;text-transform:capitalize;${o.status==='delivered'?'background:#dcfce7;color:#166534;':(o.status==='cancelled'?'background:#fee2e2;color:#991b1b;':'')}">${o.status.replace(/_/g,' ')}</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <a href="/api/orders/${o.id}/invoice" target="_blank" class="btn ghost sm" style="text-decoration:none">
+                  📄 GST Invoice
+                </a>
+                ${['placed','confirmed'].includes(o.status) ? `<button class="btn bad sm" data-c="${o.id}">Cancel</button>` : ''}
+              </div>
+            </div>
+
+            ${renderTimelineHtml(o)}
+
+            <div style="margin-top:12px;font-size:.88rem">
+              <b>Items:</b> ${o.lines.map(l => `${esc(l.name)} (UK ${l.size} × ${l.qty})`).join(', ')}
+            </div>
+
+            <div style="margin-top:6px;font-size:.84rem;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+              <span><b>Delivery to:</b> ${esc(o.address || 'Standard Address')}</span>
+              <span><b>Total:</b> ${money(o.total)} (Cash on Delivery)</span>
+            </div>
+            ${o.estimatedDelivery && o.status !== 'delivered' && o.status !== 'cancelled' ? `
+              <div style="margin-top:6px;font-size:.8rem;color:#16a34a;font-weight:600">
+                🚚 Estimated delivery by ${new Date(o.estimatedDelivery).toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric' })}
+              </div>
+            ` : ''}
+          </div>
+        `).join('') || '<div class="panel mut">No orders found. When you order shoes, they will appear here.</div>'}
+      `;
+
+      cnt.onclick = async e => {
+        const id = e.target.dataset.c;
+        if(id && confirm('Are you sure you want to cancel this order?')){
+          try {
+            await api('/orders/'+id+'/cancel', { method: 'PATCH' });
+            toast('Order cancelled');
+            renderAccount('orders');
+          } catch(err){ toast(err.message); }
+        }
+      };
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+
+  // --- SUBPAGE 3: PROFILE
+  else if(curSub === 'profile'){
+    cnt.innerHTML = `
+      <h2 style="margin-top:0">Profile & Details</h2>
+      <div class="two">
+        <form id="profileForm" class="panel">
+          <h3>Personal Information</h3>
+          <label class="fld">Full name<input id="pfName" value="${esc(S.user.name)}" required></label>
+          <label class="fld">Email address<input id="pfEmail" type="email" value="${esc(S.user.email)}" required></label>
+          <div id="emailPwWrap" hidden>
+            <label class="fld" style="color:var(--bad)">Current password required to change email
+              <input id="pfEmailPw" type="password" placeholder="Enter current password">
+            </label>
+          </div>
+          <label class="fld">Phone number<input id="pfPhone" value="${esc(S.user.phone||'')}"></label>
+          <div class="row">
+            <label class="fld">Date of birth<input id="pfDob" type="date" value="${esc(S.user.dob||'')}"></label>
+            <label class="fld">Gender
+              <select id="pfGender">
+                <option value="unspecified" ${S.user.gender==='unspecified'?'selected':''}>Prefer not to say</option>
+                <option value="men" ${S.user.gender==='men'?'selected':''}>Men</option>
+                <option value="women" ${S.user.gender==='women'?'selected':''}>Women</option>
+                <option value="other" ${S.user.gender==='other'?'selected':''}>Other</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn" id="pfSaveBtn" style="margin-top:8px">Save Profile</button>
+        </form>
+
+        <div class="panel">
+          <h3>Profile Avatar</h3>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+            <span class="avatar-circle" style="width:110px;height:110px;font-size:2.8rem" id="avatarPreview">
+              ${S.user.avatar ? `<img src="${esc(S.user.avatar)}">` : getInitials(S.user.name)}
+            </span>
+            <span class="mut" style="font-size:.85rem">Upload a photo (circle crop, max 2 MB)</span>
+            <input type="file" id="avatarFileInput" accept="image/*" style="display:none">
+            <div class="row" style="width:100%">
+              <button class="btn ghost sm" id="avatarUploadBtn">Upload image</button>
+              ${S.user.avatar ? `<button class="btn ghost sm bad" id="avatarRemoveBtn">Remove</button>` : ''}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    let unsaved = false;
+    ['pfName','pfEmail','pfPhone','pfDob','pfGender'].forEach(id => {
+      $(id).oninput = () => { unsaved = true; };
+    });
+    $('pfEmail').oninput = () => {
+      unsaved = true;
+      $('emailPwWrap').hidden = ($('pfEmail').value.trim().toLowerCase() === S.user.email.toLowerCase());
+    };
+
+    $('profileForm').onsubmit = async e => {
+      e.preventDefault();
+      try {
+        const body = {
+          name: $('pfName').value.trim(),
+          email: $('pfEmail').value.trim(),
+          phone: $('pfPhone').value.trim(),
+          dob: $('pfDob').value,
+          gender: $('pfGender').value
+        };
+        if(body.email.toLowerCase() !== S.user.email.toLowerCase()){
+          body.passwordForEmail = $('pfEmailPw').value;
+        }
+        const updated = await api('/account/profile', { method: 'PUT', body });
+        S.user = updated;
+        unsaved = false;
+        paintNav();
+        toast('Profile updated successfully!');
+        renderAccount('profile');
+      } catch(err){ toast(err.message); }
+    };
+
+    $('avatarUploadBtn').onclick = () => $('avatarFileInput').click();
+    $('avatarFileInput').onchange = e => {
+      const file = e.target.files[0];
+      if(!file) return;
+      if(file.size > 2 * 1024 * 1024) return toast('Image size must be less than 2 MB');
+      const reader = new FileReader();
+      reader.onload = async ev => {
+        try {
+          const res = await api('/account/avatar', { method: 'POST', body: { avatar: ev.target.result } });
+          S.user.avatar = res.avatar;
+          paintNav();
+          toast('Avatar updated!');
+          renderAccount('profile');
+        } catch(err){ toast(err.message); }
+      };
+      reader.readAsDataURL(file);
+    };
+    if($('avatarRemoveBtn')) {
+      $('avatarRemoveBtn').onclick = async () => {
+        try {
+          await api('/account/avatar', { method: 'POST', body: { avatar: '' } });
+          S.user.avatar = '';
+          paintNav();
+          toast('Avatar removed');
+          renderAccount('profile');
+        } catch(err){ toast(err.message); }
+      };
+    }
+  }
+
+  // --- SUBPAGE 4: ADDRESSES
+  else if(curSub === 'addresses'){
+    cnt.innerHTML = `<p class="mut">Loading addresses...</p>`;
+    try {
+      const addrs = await api('/account/addresses');
+      cnt.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 style="margin:0">Address Book (${addrs.length})</h2>
+          <button class="btn" id="addrAddBtn">+ Add New Address</button>
+        </div>
+        
+        <div class="addr-grid">
+          ${addrs.map(a => `
+            <div class="addr-card ${a.isDefault?'is-default':''}">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <b>${esc(a.name)}</b>
+                  <div>
+                    <span class="tag">${esc(a.label||'Address')}</span>
+                    ${a.isDefault ? '<span class="pill" style="border-color:var(--acc);color:var(--acc)">Default</span>' : ''}
+                  </div>
+                </div>
+                <p style="margin:8px 0;line-height:1.4">
+                  ${esc(a.line1)}${a.line2 ? '<br>'+esc(a.line2) : ''}<br>
+                  ${esc(a.city)}, ${esc(a.state)} ${esc(a.postalCode)}<br>
+                  ${esc(a.country)}
+                </p>
+                <div class="mut" style="font-size:.85rem">Phone: ${esc(a.phone||'None')}</div>
+              </div>
+              <div class="row" style="margin-top:14px;border-top:1px solid var(--line);padding-top:10px">
+                ${!a.isDefault ? `<button class="btn ghost sm" data-def="${a._id}">Set Default</button>` : ''}
+                <button class="btn ghost sm" data-edit="${a._id}">Edit</button>
+                <button class="btn ghost sm bad" data-del="${a._id}">Delete</button>
+              </div>
+            </div>
+          `).join('') || '<p class="mut">No saved addresses. Add an address for rapid checkout.</p>'}
+        </div>
+      `;
+
+      // Event handlers for address actions
+      cnt.onclick = async e => {
+        const d = e.target.dataset;
+        if(d.def){
+          try { await api('/account/addresses/'+d.def+'/default', { method: 'PUT' }); toast('Default address updated'); renderAccount('addresses'); }
+          catch(x){ toast(x.message); }
+        }
+        if(d.del && confirm('Delete this address?')){
+          try { await api('/account/addresses/'+d.del, { method: 'DELETE' }); toast('Address deleted'); renderAccount('addresses'); }
+          catch(x){ toast(x.message); }
+        }
+        if(d.edit){
+          const target = addrs.find(x => String(x._id) === d.edit);
+          if(target) showAddressDialog(target);
+        }
+      };
+
+      $('addrAddBtn').onclick = () => showAddressDialog();
+
+      function showAddressDialog(existing = null){
+        const dia = $('rv');
+        dia.innerHTML = `
+          <h3 style="margin-top:0">${existing ? 'Edit Address' : 'Add New Address'}</h3>
+          <form id="addrForm">
+            <div class="row">
+              <label class="fld">Label
+                <select id="adLbl">
+                  <option ${existing?.label==='Home'?'selected':''}>Home</option>
+                  <option ${existing?.label==='Work'?'selected':''}>Work</option>
+                  <option ${existing?.label==='Other'?'selected':''}>Other</option>
+                </select>
+              </label>
+              <label class="fld">Recipient name<input id="adName" value="${esc(existing?.name||S.user.name)}" required></label>
+            </div>
+            <label class="fld">Phone<input id="adPhone" value="${esc(existing?.phone||S.user.phone||'')}"></label>
+            <label class="fld">Street address line 1<input id="adL1" value="${esc(existing?.line1||'')}" placeholder="House number & street name" required></label>
+            <label class="fld">Apartment, suite, unit (optional)<input id="adL2" value="${esc(existing?.line2||'')}"></label>
+            <div class="row">
+              <label class="fld">City<input id="adCity" value="${esc(existing?.city||'')}" required></label>
+              <label class="fld">State / Province<input id="adState" value="${esc(existing?.state||'')}"></label>
+            </div>
+            <div class="row">
+              <label class="fld">Country
+                <select id="adCountry">
+                  <option value="IN" ${existing?.country==='IN'||!existing?'selected':''}>India (IN)</option>
+                  <option value="US" ${existing?.country==='US'?'selected':''}>United States (US)</option>
+                  <option value="UK" ${existing?.country==='UK'?'selected':''}>United Kingdom (UK)</option>
+                  <option value="CA" ${existing?.country==='CA'?'selected':''}>Canada (CA)</option>
+                </select>
+              </label>
+              <label class="fld">PIN code (6 digits)<input id="adPost" value="${esc(existing?.postalCode||'')}" placeholder="e.g. 560038" required></label>
+            </div>
+            <label style="display:flex;align-items:center;gap:8px;margin:10px 0;font-size:.9rem">
+              <input type="checkbox" id="adDef" ${existing?.isDefault?'checked':''}> Set as default delivery address
+            </label>
+            <div class="row" style="margin-top:14px">
+              <button class="btn" style="flex:2">${existing ? 'Save Changes' : 'Save Address'}</button>
+              <button type="button" class="btn ghost" id="adCancel">Cancel</button>
+            </div>
+          </form>
+        `;
+        dia.showModal();
+        $('adCancel').onclick = () => dia.close();
+        $('addrForm').onsubmit = async ev => {
+          ev.preventDefault();
+          const body = {
+            label: $('adLbl').value,
+            name: $('adName').value.trim(),
+            phone: $('adPhone').value.trim(),
+            line1: $('adL1').value.trim(),
+            line2: $('adL2').value.trim(),
+            city: $('adCity').value.trim(),
+            state: $('adState').value.trim(),
+            country: $('adCountry').value,
+            postalCode: $('adPost').value.trim(),
+            isDefault: $('adDef').checked
+          };
+          try {
+            if(existing){
+              await api('/account/addresses/'+existing._id, { method: 'PUT', body });
+              toast('Address updated');
+            } else {
+              await api('/account/addresses', { method: 'POST', body });
+              toast('Address added');
+            }
+            dia.close();
+            renderAccount('addresses');
+          } catch(err){ toast(err.message); }
+        };
+      }
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+
+  // --- SUBPAGE 5: SECURITY
+  else if(curSub === 'security'){
+    cnt.innerHTML = `<p class="mut">Loading security details...</p>`;
+    try {
+      const [userProf, sessions] = await Promise.all([
+        api('/account/profile'),
+        api('/account/sessions')
+      ]);
+
+      cnt.innerHTML = `
+        <h2 style="margin-top:0">Security & Sign In</h2>
+        <div class="two">
+          <div>
+            <form id="secPwForm" class="panel">
+              <h3 style="margin-top:0">Change Password</h3>
+              <label class="fld">Current password<input id="spCur" type="password" required></label>
+              <label class="fld">New password<input id="spNew" type="password" minlength="6" required></label>
+              <div class="mut" id="spStrength" style="margin:-6px 0 10px;font-size:.85rem"></div>
+              <button class="btn">Update Password</button>
+            </form>
+
+            <div class="panel" style="margin-top:16px">
+              <h3 style="margin-top:0">Two-Factor Authentication (TOTP)</h3>
+              <p class="mut" style="font-size:.9rem">Add an extra layer of security using Google Authenticator, Authy, or 1Password.</p>
+              ${userProf.twoFactorEnabled ? `
+                <div style="background:var(--bg);border-radius:8px;padding:12px;margin:10px 0;display:flex;align-items:center;justify-content:space-between">
+                  <span style="color:var(--acc);font-weight:700">✓ 2FA is currently active</span>
+                  <button class="btn ghost sm bad" id="disable2faBtn">Disable</button>
+                </div>
+              ` : `
+                <button class="btn ghost" id="setup2faBtn">Set Up 2FA Authenticator</button>
+              `}
+              <div id="twoFaSetupBox" style="margin-top:14px" hidden></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <h3 style="margin:0">Active Sessions</h3>
+                <button class="btn ghost sm bad" id="signoutAllBtn">Sign out all others</button>
+              </div>
+              <div style="margin-top:12px">
+                ${sessions.map(s => `
+                  <div class="line" style="display:block;padding:8px 0">
+                    <div style="display:flex;justify-content:space-between">
+                      <b>${esc(s.userAgent.slice(0, 32))}...</b>
+                      <span class="pill">Active</span>
+                    </div>
+                    <span class="mut" style="font-size:.8rem">IP: ${esc(s.ip)} · Last seen: ${date(s.lastActive)}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="panel" style="margin-top:16px;border-color:var(--bad)">
+              <h3 style="color:var(--bad);margin-top:0">Delete Account</h3>
+              <p class="mut" style="font-size:.85rem">Permanently delete your profile. Previous order records will be anonymized for compliance.</p>
+              <button class="btn bad sm" id="deleteAccountBtn">Delete Account</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      $('spNew').oninput = () => {
+        $('spStrength').textContent = $('spNew').value ? 'Password strength: ' + strength($('spNew').value) : '';
+      };
+      $('secPwForm').onsubmit = async e => {
+        e.preventDefault();
+        try {
+          await api('/auth/password', { method: 'PUT', body: { current: $('spCur').value, next: $('spNew').value } });
+          e.target.reset();
+          $('spStrength').textContent = '';
+          toast('Password updated successfully');
+        } catch(err){ toast(err.message); }
+      };
+
+      $('signoutAllBtn').onclick = async () => {
+        if(confirm('Sign out of all other browsers and devices?')){
+          try {
+            await api('/account/sessions', { method: 'DELETE' });
+            toast('Signed out from other sessions');
+            renderAccount('security');
+          } catch(err){ toast(err.message); }
+        }
+      };
+
+      if($('setup2faBtn')){
+        $('setup2faBtn').onclick = async () => {
+          try {
+            const res = await api('/account/2fa/setup', { method: 'POST' });
+            const box = $('twoFaSetupBox');
+            box.hidden = false;
+            box.innerHTML = `
+              <div style="background:var(--bg);border-radius:10px;padding:16px;text-align:center">
+                <p style="margin-top:0;font-weight:600">Scan QR Code in Authenticator App</p>
+                <img src="${res.qrCode}" alt="2FA QR Code" style="width:160px;height:160px;border-radius:8px">
+                <p class="mut" style="font-size:.8rem;word-break:break-all">Manual key: <code>${res.secret}</code></p>
+                <div class="row" style="margin-top:10px">
+                  <input id="twoFaCodeInput" placeholder="Enter 6-digit code" maxlength="6" style="text-align:center;font-size:1.1rem;letter-spacing:2px">
+                  <button class="btn sm" id="twoFaVerifyBtn">Verify & Enable</button>
+                </div>
+              </div>
+            `;
+            $('twoFaVerifyBtn').onclick = async () => {
+              const code = $('twoFaCodeInput').value.trim();
+              if(!code) return toast('Please enter the 6-digit code');
+              try {
+                await api('/account/2fa/verify', { method: 'POST', body: { token: code } });
+                toast('2FA activated!');
+                renderAccount('security');
+              } catch(err){ toast(err.message); }
+            };
+          } catch(err){ toast(err.message); }
+        };
+      }
+
+      if($('disable2faBtn')){
+        $('disable2faBtn').onclick = async () => {
+          const pw = prompt('Enter your password to disable 2FA:');
+          if(!pw) return;
+          try {
+            await api('/account/2fa/disable', { method: 'POST', body: { password: pw } });
+            toast('2FA disabled');
+            renderAccount('security');
+          } catch(err){ toast(err.message); }
+        };
+      }
+
+      $('deleteAccountBtn').onclick = async () => {
+        const confirmEmail = prompt(`To delete your account, type your email (${S.user.email}):`);
+        if(!confirmEmail || confirmEmail.toLowerCase().trim() !== S.user.email.toLowerCase()){
+          return toast('Email did not match. Account deletion cancelled.');
+        }
+        const pw = prompt('Enter your password to confirm deletion:');
+        if(!pw) return;
+        try {
+          await api('/account', { method: 'DELETE', body: { email: confirmEmail, password: pw } });
+          S.token = ''; S.user = null; ls.del('token'); paintNav(); go('/'); loadList();
+          toast('Account deleted.');
+        } catch(err){ toast(err.message); }
+      };
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+
+  // --- SUBPAGE 6: SETTINGS
+  else if(curSub === 'settings'){
+    cnt.innerHTML = `<p class="mut">Loading preferences...</p>`;
+    try {
+      const prof = await api('/account/profile');
+      const s = prof.settings || {};
+      const ep = s.emailPrefs || { orderUpdates: true, offers: true, backInStock: true };
+
+      cnt.innerHTML = `
+        <h2 style="margin-top:0">Account Preferences</h2>
+        <div class="two">
+          <form id="settingsForm" class="panel">
+            <h3>Display & Sizing</h3>
+            <label class="fld">Theme mode
+              <select id="stTheme">
+                <option value="system" ${s.theme==='system'?'selected':''}>System default</option>
+                <option value="light" ${s.theme==='light'?'selected':''}>Light</option>
+                <option value="dark" ${s.theme==='dark'?'selected':''}>Dark</option>
+              </select>
+            </label>
+            <div class="row">
+              <label class="fld">Shoe sizing system
+                <select id="stSizeSys">
+                  <option value="UK" ${s.sizeSystem==='UK'||s.sizeSystem==='IN'?'selected':''}>UK / India (UK sizing)</option>
+                  <option value="US" ${s.sizeSystem==='US'?'selected':''}>US sizing</option>
+                  <option value="EU" ${s.sizeSystem==='EU'?'selected':''}>EU sizing</option>
+                </select>
+              </label>
+              <label class="fld">Default size
+                <input type="number" id="stDefSize" value="${s.defaultSize||8}" min="4" max="14" step="0.5">
+              </label>
+            </div>
+            <label class="fld">Currency
+              <select id="stCurr">
+                <option value="INR" selected>Indian Rupee (INR ₹)</option>
+              </select>
+            </label>
+
+            <h3 style="margin-top:20px">Email Notifications</h3>
+            <label style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <input type="checkbox" id="epOrder" ${ep.orderUpdates?'checked':''}> Order updates & shipping alerts
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <input type="checkbox" id="epOffers" ${ep.offers?'checked':''}> New drops & exclusive offers
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+              <input type="checkbox" id="epStock" ${ep.backInStock?'checked':''}> Wishlist back-in-stock alerts
+            </label>
+
+            <button class="btn" style="margin-top:8px">Save Preferences</button>
+          </form>
+
+          <div class="panel">
+            <h3>Data & Privacy</h3>
+            <p class="mut" style="font-size:.9rem">Download a complete JSON export of your profile, addresses, orders, reviews, and wishlist.</p>
+            <button class="btn ghost" id="downloadDataBtn">📥 Download My Data (JSON)</button>
+          </div>
+        </div>
+      `;
+
+      $('settingsForm').onsubmit = async e => {
+        e.preventDefault();
+        const body = {
+          theme: $('stTheme').value,
+          currency: $('stCurr').value,
+          sizeSystem: $('stSizeSys').value,
+          defaultSize: +$('stDefSize').value,
+          emailPrefs: {
+            orderUpdates: $('epOrder').checked,
+            offers: $('epOffers').checked,
+            backInStock: $('epStock').checked
+          }
+        };
+        try {
+          await api('/account/settings', { method: 'PUT', body });
+          if(body.theme === 'dark' || body.theme === 'light'){
+            document.documentElement.dataset.theme = body.theme;
+            ls.set('theme', body.theme);
+          } else {
+            delete document.documentElement.dataset.theme;
+            ls.del('theme');
+          }
+          toast('Preferences saved');
+        } catch(err){ toast(err.message); }
+      };
+
+      $('downloadDataBtn').onclick = () => {
+        window.open('/api/account/export', '_blank');
+      };
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+
+  // --- SUBPAGE 7: WISHLIST
+  else if(curSub === 'wishlist'){
+    cnt.innerHTML = `<p class="mut">Loading saved items...</p>`;
+    try {
+      const ws = await api('/wishlist');
+      remember(ws);
+      cnt.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 style="margin:0">My Wishlist (${ws.length})</h2>
+          ${ws.length > 0 ? `<button class="btn ghost sm" id="shareWishBtn">🔗 Share Wishlist</button>` : ''}
+        </div>
+        <div class="grid" style="margin-top:16px">
+          ${ws.map(p => `
+            <div class="cardw">
+              <button class="card" data-id="${p.id}">
+                <div class="sw">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" style="width:100%;height:100%;object-fit:cover">`:`<span style="font-size:2rem">👟</span>`}</div>
+                <b>${esc(p.name)}</b>
+                <div class="badge">${esc(p.brand)}</div>
+                <div>${priceHtml(p)}</div>
+              </button>
+              <button class="heart" data-h="${p.id}" aria-label="Remove from wishlist">♥</button>
+            </div>
+          `).join('') || '<p class="mut">Your wishlist is empty. Tap the heart on any shoe to save it here.</p>'}
+        </div>
+      `;
+      if($('shareWishBtn')){
+        $('shareWishBtn').onclick = () => {
+          navigator.clipboard.writeText(window.location.origin + '/#/account/wishlist');
+          toast('Wishlist link copied to clipboard!');
+        };
+      }
+      cnt.onclick = e => {
+        const h = e.target.closest('[data-h]');
+        if(h) return toggleWish(h.dataset.h);
+        const b = e.target.closest('.card');
+        if(b){ go('/'); select(b.dataset.id); }
+      };
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+
+  // --- SUBPAGE 8: NOTIFICATIONS
+  else if(curSub === 'notifications'){
+    cnt.innerHTML = `<p class="mut">Loading notifications...</p>`;
+    try {
+      const res = await api('/notifications');
+      cnt.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 style="margin:0">Notifications (${res.notifications.length})</h2>
+          ${res.unreadCount > 0 ? `<button class="btn ghost sm" id="markAllReadBtn">Mark all as read</button>` : ''}
+        </div>
+        <div style="margin-top:16px">
+          ${res.notifications.map(n => `
+            <div class="panel" style="margin-bottom:10px;${n.read?'opacity:.75':'border-left:4px solid var(--acc)'}">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <b>${esc(n.title)}</b>
+                <span class="mut" style="font-size:.75rem">${date(n.createdAt)}</span>
+              </div>
+              <p style="margin:4px 0">${esc(n.message)}</p>
+              ${n.link ? `<a href="#${esc(n.link)}" style="font-size:.85rem">View details →</a>` : ''}
+            </div>
+          `).join('') || '<p class="mut">You have no new notifications.</p>'}
+        </div>
+      `;
+      if($('markAllReadBtn')){
+        $('markAllReadBtn').onclick = async () => {
+          await api('/notifications/read', { method: 'PATCH', body: {} });
+          toast('All notifications marked read');
+          fetchNotifications();
+          renderAccount('notifications');
+        };
+      }
+    } catch(err){ cnt.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+  }
+}
+
+// ---------- Admin Dashboard
+async function renderAdmin(){const a=$('admin');if(!S.user||S.user.role!=='admin'){a.innerHTML='<h1 class="h2">Admin</h1><p class="mut">Sign in with an admin account to manage the store.</p>';return}
+ const tabs=[['overview','Overview'],['orders','Orders'],['products','Products'],['customers','Customers'],['coupons','Coupons']];
+ a.innerHTML=`<h1 class="h2">Dashboard</h1><div class="tabs">${tabs.map(t=>`<button data-at="${t[0]}" class="${S.atab===t[0]?'on':''}">${t[1]}</button>`).join('')}</div><div id="ab"></div>`;
+ const ab=$('ab'),T=S.atab;
+ try{
+ if(T==='overview'){const st=await api('/admin/stats'),m=Math.max(...st.byDay.map(d=>d.total),1);
+  ab.innerHTML=`<div class="stats">${[['Revenue',money(st.revenue)],['Orders',st.orders],['Average order',money(st.aov)],['Customers',st.customers],['Products',st.products],['Low stock',st.lowStock]].map(x=>`<div class="stat"><span class="mut">${x[0]}</span><b>${x[1]}</b></div>`).join('')}</div>
+  <div class="two"><div><h3>Revenue, last 7 days</h3><div class="bars">${st.byDay.map(d=>`<div title="${formatINR(d.total)}"><i style="height:${d.total/m*85}%"></i><span style="font-size:.65rem;margin-bottom:2px">${formatCompactINR(d.total)}</span>${d.day}</div>`).join('')}</div></div>
+  <div><h3>Top sellers</h3><div class="panel">${st.top.map(t=>`<div class="line"><span>${esc(t.name)}</span><b>${t.qty} sold</b></div>`).join('')||'<span class="mut">No sales yet.</span>'}</div></div></div>
+  <h3>Running low</h3><div class="panel">${st.lowList.map(t=>`<div class="line"><span>${esc(t.name)}</span><b>${t.stock===0?'Sold out':t.stock+' left'}</b></div>`).join('')||'<span class="mut">Every shoe has healthy stock.</span>'}</div>`}
+ if(T==='orders'){const os=await api('/admin/orders');
+  ab.innerHTML=`<div class="tbl"><table><tr><th>Order</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr>${os.map(o=>`<tr><td>${oid(o)}</td><td>${date(o.createdAt)}</td><td>${esc(o.name)}<div class="badge">${esc(o.email)}</div></td><td>${o.lines.reduce((s,l)=>s+l.qty,0)}</td><td>${money(o.total)}</td><td><select data-o="${o.id}" aria-label="Status for order ${oid(o)}" ${o.status==='cancelled'?'disabled':''}>${['placed','confirmed','packed','shipped','out_for_delivery','delivered','cancelled'].map(s=>`<option value="${s}" ${s===o.status?'selected':''}>${s.replace(/_/g,' ')}</option>`).join('')}</select>
+  <a href="/api/orders/${o.id}/invoice" target="_blank" class="btn ghost sm" style="margin-left:6px;text-decoration:none">PDF</a></td></tr>`).join('')}</table></div>`}
+ if(T==='products'){const d=await api('/products?limit=200&sort=new'),ps=d.items;remember(ps);
+  ab.innerHTML=`<input id="aq" placeholder="Search ${ps.length} products" aria-label="Search products" style="max-width:360px"><div class="tbl"><table><tr><th>Shoe</th><th>Brand</th><th>Style</th><th>Selling (₹)</th><th>MRP (₹)</th><th>Stock</th><th>Featured</th><th></th></tr>${ps.map(p=>`<tr data-n="${esc(p.name.toLowerCase())}"><td>${esc(p.name)}</td><td>${esc(p.brand)}</td><td>${p.type}</td><td><input type="number" min="0" value="${Math.round(p.price/100)}" data-p="${p.id}" style="width:90px" aria-label="Price for ${esc(p.name)}"></td><td><input type="number" min="0" value="${Math.round((p.mrp||p.price)/100)}" data-mrp="${p.id}" style="width:90px" aria-label="MRP for ${esc(p.name)}"></td><td><input type="number" min="0" value="${p.stock}" data-s="${p.id}" style="width:80px" aria-label="Stock for ${esc(p.name)}"></td><td><input type="checkbox" data-f="${p.id}" ${p.featured?'checked':''} aria-label="Featured: ${esc(p.name)}"></td><td><button class="btn ghost sm" data-d="${p.id}">Delete</button></td></tr>`).join('')}</table></div>
+  <h3>Add a shoe</h3><div class="row"><input id="np" placeholder="Name" aria-label="Name"><input id="nb" placeholder="Brand" aria-label="Brand" value="Stride"><select id="ng" aria-label="For"><option>unisex</option><option>men</option><option>women</option></select><select id="nt" aria-label="Style"><option>runner</option><option>court</option><option>hightop</option><option>boot</option><option>loafer</option><option>trail</option></select></div><br>
+  <div class="row"><input id="nr" type="number" min="0" placeholder="Selling Price (₹)" aria-label="Price"><input id="nmrp" type="number" min="0" placeholder="MRP (₹)" aria-label="MRP"><input id="ns" type="number" min="0" placeholder="Stock" aria-label="Stock"><input id="nimg" placeholder="Photo / Image URL or Data URI" aria-label="Photo URL"></div><br>
+  <input id="nd" placeholder="Short description" aria-label="Description"><br><br><button class="btn" id="nadd">Add shoe</button>`;
+  $('aq').oninput=e=>{const q=e.target.value.toLowerCase();ab.querySelectorAll('tr[data-n]').forEach(r=>r.hidden=!r.dataset.n.includes(q))}}
+ if(T==='customers'){const cs=await api('/admin/customers');
+  ab.innerHTML=`<div class="tbl"><table><tr><th>Name</th><th>Email</th><th>Joined</th><th>Orders</th><th>Spent</th></tr>${cs.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.email)}</td><td>${date(c.createdAt)}</td><td>${c.orders}</td><td>${money(c.spent)}</td></tr>`).join('')}</table></div>`}
+ if(T==='coupons'){const cs=await api('/admin/coupons');
+  ab.innerHTML=`<div class="tbl"><table><tr><th>Code</th><th>Discount</th><th>Minimum spend</th><th>Active</th><th></th></tr>${cs.map(c=>`<tr><td><b>${esc(c.code)}</b></td><td>${c.type==='flat'?(money(c.amount)+' flat'):c.type==='shipping'?'Free shipping':(c.percent+'% off'+(c.maxDiscount?' (up to '+money(c.maxDiscount)+')':''))}</td><td>${money(c.minSpend)}</td><td><input type="checkbox" data-ca="${c.id}" ${c.active?'checked':''} aria-label="Active: ${esc(c.code)}"></td><td><button class="btn ghost sm" data-cd="${c.id}">Delete</button></td></tr>`).join('')}</table></div>
+  <h3>New coupon</h3><div class="row"><input id="cc1" placeholder="Code, e.g. FESTIVE20" aria-label="Code"><select id="cct"><option value="percent">Percent off (%)</option><option value="flat">Flat off (₹)</option><option value="shipping">Free shipping</option></select><input id="cc2" type="number" min="0" placeholder="Value (% or ₹)" aria-label="Value"><input id="ccmax" type="number" min="0" placeholder="Max cap (₹)" aria-label="Max discount"><input id="cc3" type="number" min="0" placeholder="Min spend (₹)" aria-label="Minimum spend"><button class="btn" id="cadd" style="flex:0;white-space:nowrap">Add coupon</button></div>`}
+ }catch(e){toast(e.message)}}
+
+$('admin').onchange=async e=>{const t=e.target,d=t.dataset,put=(id,b,m)=>api('/products/'+id,{method:'PUT',body:b}).then(()=>toast(m));try{
+ if(d.o){await api('/admin/orders/'+d.o,{method:'PATCH',body:{status:t.value}});toast('Order marked '+t.value)}
+ else if(d.p)await put(d.p,{price:Math.round(+t.value*100)},'Price updated');else if(d.mrp)await put(d.mrp,{mrp:Math.round(+t.value*100)},'MRP updated');
+ else if(d.s)await put(d.s,{stock:+t.value},'Stock updated');else if(d.f)await put(d.f,{featured:t.checked},'Featured updated');
+ else if(d.ca){await api('/admin/coupons/'+d.ca,{method:'PATCH',body:{active:t.checked}});toast('Coupon updated')}}catch(err){toast(err.message);renderAdmin()}};
+$('admin').onclick=async e=>{const t=e.target,d=t.dataset;try{
+ if(d.at){S.atab=d.at;return renderAdmin()}
+ if(d.d&&confirm('Delete this shoe? This cannot be undone.')){await api('/products/'+d.d,{method:'DELETE'});toast('Shoe deleted');renderAdmin();loadList()}
+ if(d.cd&&confirm('Delete this coupon?')){await api('/admin/coupons/'+d.cd,{method:'DELETE'});toast('Coupon deleted');renderAdmin()}
+ if(t.id==='nadd'){if(!$('np').value||!$('nr').value)return toast('Add a name and a price first');
+  const price=Math.round(+$('nr').value*100);
+  const mrp=$('nmrp')?.value?Math.round(+$('nmrp').value*100):price;
+  await api('/products',{method:'POST',body:{name:$('np').value,brand:$('nb').value||'Stride',gender:$('ng').value,type:$('nt').value,price,mrp,stock:+$('ns').value||0,image:$('nimg')?.value||'',desc:$('nd').value}});toast('Shoe added');renderAdmin();loadList()}
+ if(t.id==='cadd'){if(!$('cc1').value)return toast('Add a code first');
+  const type=$('cct')?.value||'percent';
+  const percent=type==='percent'?+$('cc2').value||0:0;
+  const amount=type==='flat'?Math.round(+$('cc2').value*100):0;
+  const maxDiscount=$('ccmax')?.value?Math.round(+$('ccmax').value*100):0;
+  const minSpend=$('cc3')?.value?Math.round(+$('cc3').value*100):0;
+  await api('/admin/coupons',{method:'POST',body:{code:$('cc1').value.trim().toUpperCase(),type,percent,amount,maxDiscount,minSpend}});toast('Coupon added');renderAdmin()}}catch(err){toast(err.message)}};
+// ---------- Router + Boot
+const go=p=>{if(location.hash==='#'+p)route();else location.hash=p};
+function route(){
+ const raw = (location.hash||'#/').slice(1)||'/';
+ const parts = raw.split('/').filter(Boolean);
+ const main = parts[0] || '';
+ const sub = parts[1] || 'overview';
+
+ let view = 'shop';
+ if(main === 'login') view = 'login';
+ else if(main === 'account') view = 'account';
+ else if(main === 'admin') view = 'admin';
+
+ if((view==='account'||view==='admin') && !S.user){
+   S.next = raw;
+   return go('/login');
+ }
+ if(view==='admin' && S.user.role!=='admin'){
+   toast('That page is for admins only');
+   return go('/');
+ }
+
+ ['shop','login','account','admin'].forEach(x => $(x).hidden = (x !== view));
+ document.querySelectorAll('.nav').forEach(b => b.classList.toggle('on', b.dataset.r === '/' + main));
+
+ if(view==='login') renderLogin();
+ if(view==='account') renderAccount(sub);
+ if(view==='admin') renderAdmin();
+ scrollTo(0,0);
+}
+
+addEventListener('hashchange', route);
+$('logo').onclick=()=>go('/');
+document.querySelectorAll('.nav').forEach(b => {
+  b.onclick = () => go(b.dataset.r);
+});
+
+(async()=>{
+  if(S.token){
+    try{ S.user = await api('/auth/me'); }
+    catch(e){ S.token=''; ls.del('token'); }
+  }
+  paintNav();
+  try{
+    const m = await api('/products/meta');
+    $('mx').max = m.maxPrice;
+    $('mx').value = m.maxPrice;
+    $('brand').innerHTML += m.brands.map(b=>`<option>${esc(b)}</option>`).join('');
+  }catch(e){}
+  $('mxl').textContent = money($('mx').value);
+  await loadList();
+  if(F.items[0]) select(F.items[0].id);
+  drawCart();
+  route();
+})();
+</script></body></html>
