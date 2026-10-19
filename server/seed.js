@@ -1,3 +1,5 @@
+const path = require('path');
+const fs = require('fs');
 require('dotenv').config();
 const mongoose = require('mongoose'), bcrypt = require('bcryptjs');
 const { User, Product, Review, Coupon, Order, TYPES } = require('./models');
@@ -174,8 +176,16 @@ const WHO = ['Maya', 'Rohan', 'Priya', 'Vikram', 'Ananya', 'Kabir', 'Farah', 'Ra
   })));
 
   // 3. Products in integer paise with realistic MRP and Selling Price (10-40% discount)
-  const seen = new Set(), prods = [];
-  for (let i = 0; i < 60; i++) {
+  const seen = new Set();
+  let prods = [];
+  const manifestPath = path.join(__dirname, '../seed_manifest.json');
+  if (fs.existsSync(manifestPath)) {
+    try {
+      prods = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    } catch(e) { prods = []; }
+  }
+  if (!prods.length) {
+    for (let i = 0; i < 60; i++) {
     const type = TYPES[i % 6];
     const pool = NOUN[type];
     const brand = BRANDS[i % 6];
@@ -254,6 +264,7 @@ const WHO = ['Maya', 'Rohan', 'Priya', 'Vikram', 'Ananya', 'Kabir', 'Farah', 'Ra
       desc: DESC[type],
       featured: i % 8 === 0
     });
+    }
   }
 
   const ps = await Product.insertMany(prods);
