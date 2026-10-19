@@ -21,6 +21,7 @@ const User = mongoose.model('User', new mongoose.Schema({
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
   passwordHash: { type: String, required: true },
   role: { type: String, enum: ['customer', 'admin', 'staff'], default: 'customer' },
+  blocked: { type: Boolean, default: false },
   phone: { type: String, default: '' },
   address: { type: String, default: '' },
   avatar: { type: String, default: '' },

@@ -17,8 +17,30 @@ const wrap = fn => (req, res, next) => fn(req, res, next).catch(e => res.status(
 const sign = u => jwt.sign({ id: u.id, role: u.role }, SECRET, { expiresIn: '7d' });
 const parse = req => { try { return jwt.verify((req.get('authorization') || '').slice(7), SECRET); } catch { return null; } };
 const optional = (req, _, next) => { req.auth = parse(req); next(); };
-const needAuth = (req, res, next) => { req.auth = parse(req); req.auth ? next() : res.status(401).json({ error: 'Please sign in first' }); };
-const needAdmin = (req, res, next) => { req.auth = parse(req); req.auth?.role === 'admin' ? next() : res.status(403).json({ error: 'Admins only' }); };
+const needAuth = async (req, res, next) => {
+  req.auth = parse(req);
+  if (!req.auth) return res.status(401).json({ error: 'Please sign in first' });
+  try {
+    const u = await User.findById(req.auth.id).select('role blocked');
+    if (!u || u.blocked) return res.status(401).json({ error: 'User session is invalid or user has been blocked' });
+    req.userRole = u.role;
+    next();
+  } catch (err) {
+    return res.status(401).json({ error: 'Authentication failed' });
+  }
+};
+const needAdmin = async (req, res, next) => {
+  req.auth = parse(req);
+  if (!req.auth) return res.status(401).json({ error: 'Please sign in first' });
+  try {
+    const u = await User.findById(req.auth.id).select('role blocked');
+    if (!u || u.blocked || u.role !== 'admin') return res.status(403).json({ error: 'Admins only' });
+    req.userRole = u.role;
+    next();
+  } catch (err) {
+    return res.status(403).json({ error: 'Admins only' });
+  }
+};
 const pub = u => ({
   id: u.id,
   name: u.name,
@@ -135,15 +157,30 @@ const rate = async pid => { const [a] = await Review.aggregate([{ $match: { prod
 // ---- Auth + profile
 app.post('/api/auth/register', limit(10, 9e5), wrap(async (req, res) => {
   const { name, email, password } = req.body;
-  if (!name?.trim() || !/^\S+@\S+\.\S+$/.test(email || '')) fail('Enter your name and a valid email address');
-  if (!password || password.length < 6) fail('Choose a password with at least 6 characters');
-  if (await User.findOne({ email: email.toLowerCase() })) fail('That email already has an account. Sign in instead.', 409);
-  const u = await User.create({ name, email, passwordHash: bcrypt.hashSync(password, 10) });
+  if (typeof name !== 'string' || typeof email !== 'string' || typeof password !== 'string') {
+    fail('Invalid input format');
+  }
+  const cleanName = name.trim();
+  const cleanEmail = email.trim().toLowerCase();
+  if (!cleanName || !/^\S+@\S+\.\S+$/.test(cleanEmail)) fail('Enter your name and a valid email address');
+  if (cleanName.length > 100 || cleanEmail.length > 255) fail('Input is too long');
+  if (!password || password.length < 6 || password.length > 128) fail('Choose a password with at least 6 characters');
+  if (await User.findOne({ email: cleanEmail })) fail('That email already has an account. Sign in instead.', 409);
+  const u = await User.create({ name: cleanName, email: cleanEmail, passwordHash: bcrypt.hashSync(password, 10), role: 'customer' });
   res.status(201).json({ token: sign(u), user: pub(u) });
 }));
 app.post('/api/auth/login', limit(10, 9e5), wrap(async (req, res) => {
-  const u = await User.findOne({ email: String(req.body.email || '').toLowerCase() });
-  if (!u || !bcrypt.compareSync(req.body.password || '', u.passwordHash)) fail('Wrong email or password', 401);
+  const { email, password } = req.body;
+  if (typeof email !== 'string' || typeof password !== 'string') {
+    fail('Invalid email or password', 401);
+  }
+  const cleanEmail = email.trim().toLowerCase();
+  const u = await User.findOne({ email: cleanEmail });
+  if (!u || !bcrypt.compareSync(password, u.passwordHash)) {
+    fail('Invalid email or password', 401);
+  }
+  const k = req.ip + req.path;
+  hits.delete(k);
   res.json({ token: sign(u), user: pub(u) });
 }));
 app.post('/api/auth/forgot', limit(5, 9e5), wrap(async (req, res) => {
