@@ -7,13 +7,17 @@
     "dev": "node --watch server/index.js",
     "seed": "node server/seed.js",
     "images:audit": "node server/audit_images.js",
-    "images:contact-sheet": "node server/generate_contact_sheet.js"
+    "images:contact-sheet": "node server/generate_contact_sheet.js",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:all": "npm test"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.0",
     "multer": "^2.4.0",
@@ -22,7 +26,10 @@
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "file-type": "^22.2.0",
-    "sharp": "^0.35.5"
+    "sharp": "^0.35.5",
+    "supertest": "^7.3.1",
+    "vitest": "^5.0.5"
   }
 }

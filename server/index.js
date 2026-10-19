@@ -604,12 +604,17 @@ app.post('/api/products', needAdmin, wrap(async (req, res) => {
 }));
 
 app.put('/api/products/:id', needAdmin, wrap(async (req, res) => {
-  const body = { ...req.body };
-  if (body.mrp !== undefined) body.mrp = Math.round(+body.mrp);
-  if (body.price !== undefined) body.price = Math.round(+body.price);
-  if (body.mrp !== undefined && body.price !== undefined && body.price > body.mrp) fail('Selling price cannot exceed MRP');
-  if (body.images && Array.isArray(body.images) && body.images.length < 3) fail('Product must have at least 3 distinct photos to remain published');
-  res.json(await Product.findByIdAndUpdate(req.params.id, body, { new: true, runValidators: true }));
+  const allowed = ['name', 'brand', 'gender', 'type', 'mrp', 'price', 'stock', 'image', 'images', 'desc', 'featured', 'colorways', 'highlights', 'sizes'];
+  const update = {};
+  for (const k of Object.keys(req.body)) {
+    if (k.startsWith('$')) fail('Invalid operator in request body', 400);
+    if (allowed.includes(k)) update[k] = req.body[k];
+  }
+  if (update.mrp !== undefined) update.mrp = Math.round(+update.mrp);
+  if (update.price !== undefined) update.price = Math.round(+update.price);
+  if (update.mrp !== undefined && update.price !== undefined && update.price > update.mrp) fail('Selling price cannot exceed MRP');
+  if (update.images && Array.isArray(update.images) && update.images.length < 3) fail('Product must have at least 3 distinct photos to remain published');
+  res.json(await Product.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true }));
 }));
 
 app.delete('/api/products/:id', needAdmin, wrap(async (req, res) => res.json(await Product.findByIdAndDelete(req.params.id))));
@@ -743,8 +748,10 @@ app.patch('/api/orders/:id/cancel', needAuth, wrap(async (req, res) => {
 app.get('/api/orders/:id/invoice', optional, wrap(async (req, res) => {
   const o = await Order.findById(req.params.id);
   if (!o) fail('Order not found', 404);
-  if (req.auth && req.auth.role !== 'admin' && String(o.user) !== req.auth.id) {
-    fail('Unauthorized', 403);
+  if (o.user) {
+    if (!req.auth || (req.auth.role !== 'admin' && String(o.user) !== req.auth.id)) {
+      fail('Unauthorized', 403);
+    }
   }
 
   const doc = new PDFDocument({ size: 'A4', margin: 40 });
